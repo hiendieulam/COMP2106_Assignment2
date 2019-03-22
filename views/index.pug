@@ -1,0 +1,458 @@
+extends layout
+
+block content
+  main#main(role='main')
+    // Role Main
+    section
+      .container
+        // Create slides to show the promotion information of the book
+        #myCarousel.carousel.slide(data-ride='carousel', aria-label='product')
+          // Indicators
+          ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
+            li(data-target='#myCarousel', data-slide-to='2')
+          // Wrapper for slides 0, 1, 2
+          #myCarousel-items.carousel-inner
+            .item.active(role='group', aria-label='new product')
+              a
+                img(src='images/Banner_Art_1920_814.png', alt='Save off 30%', style='width:100%;')
+              .carousel-caption
+                h4 New Food
+            .item(role='group', aria-label='new promotion')
+              a
+                img(src='images/Banner_Art_1920_814_1.png', alt='Save off 70%', style='width:100%;')
+              .carousel-caption
+                h4 New Promotion
+            .item(role='group', aria-label='new sale')
+              a
+                img(src='images/Banner_Art_1920_814_2.png', alt='Save off 50%', style='width:100%;')
+              .carousel-caption
+                h4 The Best Sale Food
+          // Left and right controls
+          a.left.carousel-control(href='#myCarousel', data-slide='prev', role='button', tabindex='0', aria-controls='myCarousel-items', aria-label='Previous Slide')
+            span.glyphicon.glyphicon-chevron-left
+            span.sr-only Previous
+          a.right.carousel-control(href='#myCarousel', data-slide='next', role='button', tabindex='0', aria-controls='myCarousel-items', aria-label='Next Slide')
+            span.glyphicon.glyphicon-chevron-right
+            span.sr-only Next
+    section#content
+      // Create a content has one row and three columns
+      .container.text-center
+        .row
+          aside(role='complementary')
+            // Create the first column
+            .col-sm-3.well
+              #well.alert.alert-success.fade.in
+                form(role='form', action='location')
+                  a.close(href='#', data-dismiss='alert', aria-label='close') ×
+                  fieldset
+                    legend
+                      strong Your Location
+                    div
+                      p The store near your location
+                    .row
+                      .col-sm-4
+                        p
+                          label Address
+                      .col-sm-8
+                        input#addressinput(type='text', required='')
+                    .row
+                      .col-sm-4
+                        p
+                          label State 
+                      .col-sm-8
+                        input#stateinput(type='text', aria-labelledby='stateinput', required='')
+                    .row
+                      .col-sm-4
+                        p
+                          label Zip Code
+                      .col-sm-8
+                        input#zipinput(type='text', aria-labelledby='zipinput', required='')
+                    .row
+                      .col-sm-4
+                        p
+                          label City
+                      .col-sm-8
+                        .select
+                          select#cityinput(name='city')
+                            option Please choose City
+                            option Toronto
+                            option Vancouver
+                            option Montreal
+                    button.btn.btn-outline-success(role='button', type='submit') Search
+            // End class col-sm-3 well
+            // Create the second column to dispaly some information about products
+            .col-sm-9
+              // Create slideshow to show some important products
+              // Create five small products display on one row and, when click to thumbnails will display larger images
+              .row
+                .col-sm-12
+                  .col-sm-12
+                    .well
+                      figure
+                      img(src='images/Banner_Art_1920_814_1.png', style='width:100%;', alt='ADS')
+    section(role='region')
+      .secondcontent
+        // Create these item also looked at and it display four images on a row
+        .row
+          .col-sm-12
+            #thebestselling.row
+              .col-sm-4
+                h5.foodsgallery The Best Selling Foods
+              .col-sm-8
+                .row
+                  #filter.col-sm-12
+                    fieldset.radio
+                      .radio
+                        input#radio1(type='radio', name='radio', value='0')
+                        label(for='radio1') Common Foods
+                        input#radio2(type='radio', name='radio', value='1')
+                        label(for='radio2') Spicy Foods
+                        input#radio3(type='radio', name='radio', value='2')
+                        label(for='radio3') Delicious Foods
+        .col-sm-12
+          .row
+            article(role='article')
+              .col-sm-12.col-md-6.col-lg-3.well2
+                // Create detailed price information food and share information
+                h1 FOOD 1
+                h2.linkshare
+                  | $2,89 | SHARE
+                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                    img.img-linknetwork(src='images/twitter.png', alt='twitter', width='17')
+                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                    img.img-linknetwork(src='images/facebook.png', alt='facebook', width='17')
+                  a(href='https://www.pinterest.ca', target='_blank', title='Click to view pinterest')
+                    img.img-linknetwork(src='images/pinterest.png', alt='pinterest', width='17')
+                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                    img.img-linknetwork(src='images/linkedin.png', alt='linkedin', width='17')
+                // Semantic Date / Time
+                time(datetime='2018-12-08T00:00Z')
+                  | November 1
+                  sup st
+                img(src='images/images_499x446_1.png', style='width:100%;', alt='ADS')
+                p Good quality food
+                // Create vote quality, shipping cost about food
+                h3
+                  a
+                    | RATE:
+                    img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gray_10x9.png', alt='star')
+                // Choose size for food
+                h3 Foods Size
+                select#foodsize.form-control-size
+                  option Please choose size...
+                  option Small 
+                  option Medium
+                  option Large
+                // Choose buy food
+                button.addtocart(role='button', type='submit') Add To Cart
+              // End class col-sm-3 well
+            article(role='article')
+              .col-sm-12.col-md-6.col-lg-3.well2
+                // Create detailed price information food and share information
+                h1 FOOD 2
+                h2.linkshare
+                  | $5,89 | SHARE
+                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                    img.img-linknetwork(src='images/twitter.png', alt='twitter', width='17')
+                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                    img.img-linknetwork(src='images/facebook.png', alt='facebook', width='17')
+                  a(href='https://www.pinterest.ca', target='_blank', title='Click to view pinterest')
+                    img.img-linknetwork(src='images/pinterest.png', alt='pinterest', width='17')
+                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                    img.img-linknetwork(src='images/linkedin.png', alt='linkedin', width='17')
+                // Semantic Date / Time
+                time(datetime='2018-12-08T00:00Z')
+                  | November 1
+                  sup st
+                img(src='images/images_499x446.png', style='width:100%;', alt='ADS')
+                p Good quality food
+                // Create vote quality, shipping cost about food
+                h3
+                  a
+                    | RATE:
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gray_10x9.png', alt='star')
+                // Choose size for food
+                h3 Foods Size
+                select#foodsize1.form-control-size
+                  option Please choose size...
+                  option Small 
+                  option Medium
+                  option Large
+                // Choose buy food
+                button.addtocart(role='button', type='submit') Add To Cart
+              // End class col-sm-3 well
+            article(role='article')
+              .col-sm-12.col-md-6.col-lg-3.well2
+                // Create detailed price information food and share information
+                h1 FOOD 3
+                h2.linkshare
+                  | $2,89 | SHARE
+                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                    img.img-linknetwork(src='images/twitter.png', alt='twitter', width='17')
+                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                    img.img-linknetwork(src='images/facebook.png', alt='facebook', width='17')
+                  a(href='https://www.pinterest.ca', target='_blank', title='Click to view pinterest')
+                    img.img-linknetwork(src='images/pinterest.png', alt='pinterest', width='17')
+                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                    img.img-linknetwork(src='images/linkedin.png', alt='linkedin', width='17')
+                // Semantic Date / Time
+                time(datetime='2018-12-08T00:00Z')
+                  | November 1
+                  sup st
+                img(src='images/images_499x446_1.png', style='width:100%;', alt='ADS')
+                p Good quality food
+                // Create vote quality, shipping cost about food
+                h3
+                  a
+                    | RATE:
+                    img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gray_10x9.png', alt='star')
+                // Choose size for food
+                h3 Foods Size
+                select#foodsize2.form-control-size
+                  option Please choose size...
+                  option Small 
+                  option Medium
+                  option Large
+                // Choose buy food
+                button.addtocart(role='button', type='submit') Add To Cart
+              // End class col-sm-3 well
+            article(role='article')
+              .col-sm-12.col-md-6.col-lg-3.well2
+                // Create detailed price information food and share information
+                h1 FOOD 4
+                h2.linkshare
+                  | $5,89 | SHARE
+                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                    img.img-linknetwork(src='images/twitter.png', alt='twitter', width='17')
+                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                    img.img-linknetwork(src='images/facebook.png', alt='facebook', width='17')
+                  a(href='https://www.pinterest.ca', target='_blank', title='Click to view pinterest')
+                    img.img-linknetwork(src='images/pinterest.png', alt='pinterest', width='17')
+                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                    img.img-linknetwork(src='images/linkedin.png', alt='linkedin', width='17')
+                // Semantic Date / Time
+                time(datetime='2018-12-08T00:00Z')
+                  | November 1
+                  sup st
+                img(src='images/images_499x446_2.png', style='width:100%;', alt='ADS')
+                p Good quality food
+                // Create vote quality, shipping cost about food
+                h3
+                  a
+                    | RATE:
+                    img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gold_10x9.png', alt='star')
+                  img.star(src='images/star_gray_10x9.png', alt='star')
+                // Choose size for food
+                h3 Foods Size
+                select#foodsize3.form-control-size
+                  option Please choose size...
+                  option Small 
+                  option Medium
+                  option Large
+                // Choose buy food
+                button.addtocart(role='button', type='submit') Add To Cart
+              // End class col-sm-3 well
+              a#see-all(href='#', title='') See All » 
+    section#thirdcontent(role='region')
+      .col-sm-12
+        article(role='article')
+          // Display description of the Jewelry Products
+          h5.description Description Foods
+          #description.row
+            // Create two colums to display images and some information about product in row
+            .col-sm-12.col-md-4.col-lg-3
+              .well
+                h1 Pizza
+                img(src='images/images_499x446_1.png', width='100%')
+            .col-sm-12.col-md-4.col-lg-6
+              .thumbnail
+                // Detail information about the product
+                h3 Food
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+                p.fooddetails
+                  | Spicy SpicySpicySpicySpicySpicySpicySpicy
+                  span Foods
+            .col-sm-12.col-md-3.col-lg-3
+              .thumbnail.alert.alert-success.fade.in
+                a.close(href='#', data-dismiss='alert', aria-label='close') ×
+                article.toolbar
+                  div(role='toolbar', aria-label='sorting options', aria-controls='sortable')
+                    button(type='button', aria-pressed='true', data-sort='ascending') A to Z
+                    button(type='button', aria-pressed='false', data-sort='descending') Z to A
+                  ul#sortable(tabindex='-1')
+                    li Beef Pizza
+                    li Spicy Foods
+                    li Sea Foods
+                    li Chicken Breads
+                    li Hamburgers
+                    li Sea1 Foods
+                    li Chicken2 Breads
+    section#fourcontent(role='region')
+      .col-sm-12
+        article(role='article')
+          h5.allfoods ALL FOODS
+          // Thumbnail images display all images in the Gallery
+          // Create five products display in row
+          .row(id='allfoods')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446.png', style='width:100%;', onclick='currentSlide(6)', alt='foods')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446_1.png', style='width:100%;', onclick='currentSlide(7)', alt='foods 1')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446_2.png', style='width:100%;', onclick='currentSlide(8)', alt='foods 2')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446.png', style='width:100%;', onclick='currentSlide(9)', alt='foods')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446_1.png', style='width:100%;', onclick='currentSlide(10)', alt='foods 1')
+        article(role='article')
+          // Create five products display in row
+          .row
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446.png', style='width:100%;', onclick='currentSlide(6)', alt='foods')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446_1.png', style='width:100%;', onclick='currentSlide(7)', alt='foods 1')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446_2.png', style='width:100%;', onclick='currentSlide(8)', alt='foods 2')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446.png', style='width:100%;', onclick='currentSlide(9)', alt='foods')
+            .column
+              figure
+                img.demo2.cursor(src='images/images_499x446_1.png', style='width:100%;', onclick='currentSlide(10)', alt='foods 1')
+        // Next and previous buttons to move to the next image or the previous image
+        a#see-all1(href='#', title='') See All » 
+    section(role='region')
+      // Create a banner advertising for jewelry products and introduce the company
+      .row
+        .col-sm-12
+          // Accordions / collapse/expand
+          article.tab-interface
+            ul(role='tablist')
+              li(role='presentation')
+                a(href='#section1', role='tab', tabindex='0', aria-controls='section1', aria-selected='true') WAYS TO GIVE FOOD
+              li(role='presentation')
+                a(href='#section2', role='tab', tabindex='-1', aria-controls='section2') CORPORATE PARTNERSHIP
+            section#section1(role='tabpanel')
+              h3 How does it work?
+              p
+                | Each team will be given 3500 lbs of food to sort, pack, weigh and palletize for a maximum of 90 minutes.
+                | You’ll be assigned a Team Captain who will stop the clock once they feel your team is completely done, and will record your finishing time on our leadership board.
+            section#section2(role='tabpanel', aria-hidden='true')
+              h3 How do you win the Food Sort Challenge?
+              p
+                | The winning team will be the first to finish before the clock stops and when the sort station is clean, returned to its original state, and all team members are present.
+                | Since the competition is continuous, the overall winner can only be determined after the last shift has finished.
+                abbr(title='Cascading Style Sheets')
+                  | The winner will be announced after the final shift is completed at the end of the event, and over email and social media.
+    section(role='region')
+      .container-fluid
+        #our_mission.row
+          .col-12.col-sm-12.col-md-4.col-lg-8
+            h2
+              | We need your help to give food to thousands of families and individuals in need all across the city.
+            button.our_mission(type='submit') Our Mission
+          .col-12.col-sm-12.col-md-4.col-lg-4
+            div
+              img(src='images/images_655x621.png', style='width:50%;', alt='ADS')
+    section(role='region')
+      .container-fluid
+        #donate_now.row
+          .col-12.col-sm-12.col-md-4.col-lg-4
+            img(src='images/images_655x621_2.png', style='width:50%;', alt='ADS')
+          .col-12.col-sm-12.col-md-4.col-lg-8
+            div
+              h6 We belive that the every human being has the right to food.
+              button.donate_now(type='submit') Donate Now
+    section(role='region')
+      aside(role='complementary')
+        // Create two banner ads for foods
+        .row
+          .col-sm-6
+            .well
+              p Foods
+              figure
+                img(src='images/Banner_Art_1920_814_1.png', style='width:100%;', alt='ADS')
+                figcaption
+                  | Each team will be given 3500 lbs of food to sort, pack, weigh and palletize for a maximum of 90 minutes.
+                  br
+                  a
+                    | You’ll be assigned a Team Captain who will stop the clock once they feel your team is completely done, and will record your finishing time on our leadership board.
+          .col-sm-6
+            .well
+              p Foods
+              figure
+                img(src='images/Banner_Art_1920_814_2.png', style='width:100%; padding-left:20%;', alt='ADS')
+                figcaption
+                  | The winning team will be the first to finish before the clock stops and when the sort station is clean, returned to its original state, and all team members are present.
+                  br
+                  a
+                    | The winner will be announced after the final shift is completed at the end of the event, and over email and social media.
