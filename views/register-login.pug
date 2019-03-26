@@ -1,0 +1,93 @@
+extends layout
+block content
+    main#main
+        section#content1(role='region')
+            .col-12.col-sm-12.col-md-12.col-lg-12
+                p(style='clear:both;')
+                .containertabs
+                    // Create Navigation Tabs to describle the functions of the product
+                    .tabs
+                        ul.tabNavigation
+                            li
+                                a(href='#first') Register 
+                            li
+                                a(href='#second') Login
+                        #first
+                            .row
+                                form(action='#')
+                                    fieldset
+                                        p Enter your personal details to create an account
+                                        .col-12.col-sm-12.col-md-12.col-lg-12
+                                            .row
+                                                .col-12.col-sm-12.col-md-1.col-lg-1
+                                                    label Email
+                                                .col-12.col-sm-12.col-md-5.col-lg-5
+                                                    input#email(type='text', style='width: 100%;', aria-labelledby='email', required='')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter your Email
+                                            .row
+                                                .col-12.col-sm-12.col-md-1.col-lg-1
+                                                    label password
+                                                .col-12.col-sm-12.col-md-4.col-lg-5
+                                                    input(style='width: 100%;')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter your Password
+                                            .row
+                                                .col-12.col-sm-12.col-md-1.col-lg-1
+                                                    label Reapeat Pass
+                                                .col-12.col-sm-12.col-md-4.col-lg-5
+                                                    input#repassword(style='width: 100%;')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter your Password
+                                        .col-12.col-sm-12.col-md-12.col-lg-12
+                                            .row
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    a(href='https://www.facebook.com/')
+                                                        img.d-inline-block.align-top(src='images/signinbyface.jpg', style='width:100%;', alt='details')
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    label(style='float: left;') * Sign in with Facebook
+                                            .row
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    a(href='https://www.google.com/')
+                                                        img.d-inline-block.align-top(src='images/singinbygoogle.jpg', style='width:100%;', alt='details')
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    label(style='float: left;') * Sign in with Goolge
+                                            p By creating an account you agree to our Term & Privacy
+                                        button.create_account(role='button', type='submit') Create Account
+                        // Create the second Navigation Tabs to describle the Events
+                        #second
+                            .row
+                                form(action='#')
+                                    fieldset
+                                        p Enter your Email and Password to signin
+                                        .col-12.col-sm-12.col-md-12.col-lg-12
+                                            .row
+                                                .col-12.col-sm-12.col-md-1.col-lg-1
+                                                    label Email
+                                                .col-12.col-sm-12.col-md-5.col-lg-5
+                                                    input#email1(type='text', style='width: 100%;', aria-labelledby='email', required='')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter your Email
+                                            .row
+                                                .col-12.col-sm-12.col-md-1.col-lg-1
+                                                    label password
+                                                .col-12.col-sm-12.col-md-4.col-lg-5
+                                                    input(style='width: 100%;')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter your Password
+                                        .col-12.col-sm-12.col-md-12.col-lg-12
+                                            .row
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    a(href='https://www.facebook.com/')
+                                                        img.d-inline-block.align-top(src='images/signinbyface.jpg', style='width:100%;', alt='details')
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    label(style='float: left;') * Sign in with Facebook
+                                            .row
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    a(href='https://www.google.com/')
+                                                        img.d-inline-block.align-top(src='images/singinbygoogle.jpg', style='width:100%;', alt='details')
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    label(style='float: left;') * Sign in with Goolge
+                                            a(href='#') Forgot your Password? CLICK HERE
+                                        button.create_account(role='button', type='submit') Login
+                .waste

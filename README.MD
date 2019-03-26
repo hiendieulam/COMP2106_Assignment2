@@ -1,2 +1,2 @@
-# Comp2106 Assignment2 Part 1
-## Hien Lam  
+# Comp2106 Assignment 2
+## Hien Lam - 200381290

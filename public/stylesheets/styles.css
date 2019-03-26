@@ -1,44 +1,6 @@
 /** Import normalize.css **/
 @import url("css/normalize.css");
 
-/* Tabs */
-
-ul[role="tablist"] {
-    margin:0;
-}
-
-[role="tabpanel"][aria-hidden="true"] {
-    display: none;
-    padding: 0.75em ;
-}
-
-[role="tablist"] li {
-    display: inline-block;
-    list-style: none;
-}
-
-a[aria-selected], a[role="tab"]:focus {
-    background: #fff;
-    color: #222;
-    border-top: 2px solid #579408;
-    position: relative;
-    top: 2px;
-    padding: 0.75em ;
-}
-a[role="tab"] {
-    padding: 0.75em ;
-    /* border: 1px solid #222; */
-    background-color: #ebebeb;
-    color: #76ba1b;
-}
-
-[role="tabpanel"] {
-    margin-top: 0;
-    padding: .8em;
-    border: 1px solid #76ba1b;
-    padding: 0.75em ;
-}
-
 
 
 body {
@@ -59,7 +21,7 @@ header .Topbar {
     margin-bottom: 10px; 
     padding-bottom: 1%;
     font-family: 'Open Sans', sans-serif;
-    margin-left: 40%;
+    margin-left: 35%;
 }
 /** A format as color, font-size,.. of <a> in Topbar **/
 header .Topbar a {
@@ -123,13 +85,12 @@ header .Topbar a:hover {
     padding-right: 5px;
 }
 /** A format as flex-direction, flex-basic, padding,...for signin **/
-.signin {
+.register {
     display: flex;
     flex-direction: column;
     flex-basis: 5%;
-    padding-top: 5px;
+    padding-top: 3px;
     display: inline-block;
-    color: #76ba1b;
     font-weight: bold;
 }
 
@@ -137,9 +98,8 @@ header .Topbar a:hover {
     display: flex;
     flex-direction: column;
     flex-basis: 5%;
-    padding-top: 5px;
+    padding-top: 3px;
     display: inline-block;
-    color: #5f6c70;
     font-weight: bold;
 }
 
@@ -160,12 +120,19 @@ input.sitesearch, input.buttonsearch {
     height: 30px;
     text-decoration:none;
     border-radius:5px;
+        color: white;
+}
+/** A format as width, padding, border, background...for input of sitesearch **/
+input.sitesearch
+{
+    padding: 5px;
+    border-color: 2px grey;
+    width:150px;
+    background: #333333;
+    border-radius:5px;
+    color: white;
 }
 
-/* rating stars */
-.checked {
-    color: orange;
-}
 /** A format as border, background-color, text-shadow, color...for button when the user moves to mouse over button **/
 .buttonsearch:hover {
     background:none #333333;
@@ -177,31 +144,214 @@ input.sitesearch, input.buttonsearch {
     border-radius:5px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
-/** A format as width, padding, border, background...for input of sitesearch **/
-input.sitesearch
-{
-    padding: 5px;
-    border-color: 2px grey;
-    width:150px;
-    background: #333333;
-    border-radius:5px;
+button.addtocart {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:70%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    width:70%;
+
+}
+/**  addtocart format when move the mouse on  **/
+button.addtocart:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: #fc8805;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:70%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px  #BEBEBE inset;
+}
+button.subscribe {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:70%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+
 }
 
+button.subscribe:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: #fc8805;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:70%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px  #BEBEBE inset;
+}
 
+button.create_new {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+
+
+}
+button.create_new:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: #fc8805;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px  #BEBEBE inset;
+}
+button.cancel {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+
+}
+button.cancel:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: #fc8805;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px  #BEBEBE inset;
+}
+button.create_account {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+
+}
+button.create_account:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: #fc8805;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px  #BEBEBE inset;
+}
+button.update {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+
+}
+button.update:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: #fc8805;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:30%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px  #BEBEBE inset;
+}
+button.edit, button.delete, button.details {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:100%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+
+}
+button.edit, button.delete, button.details:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: #fc8805;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 15%;
+    width:100%;
+    height:35px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px  #BEBEBE inset;
+}
 
 /**************** HEADER ****************/
 /** A format as background-color, border, width, position,font-size,.. in header **/
 header {
     background-color:#76ba1b;
     width: 100%;
-    height: 27%;
+    height: 25%;
     position: fixed;
     top: 0;
     padding-left: 0; 
     border-top: 1px solid white;
     border-bottom: 10px solid #fc8f01;
     border-top: 45px solid #ececec;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: white;
     z-index: 100;
     font-family: oswald;
@@ -216,7 +366,7 @@ header nav ul {
     padding: 0;	
     float: left;
     position: relative;
-    left: 40%;
+    left: 50%;
 }
 header nav ul li {
     float: right;
@@ -242,7 +392,7 @@ header nav a:hover {
     background: rgba(0,0,0,0);
     box-shadow: 1px 1px 1px 1px #fcfcfc;  
     transition: .25s linear;
-    padding-left: 5px;
+    padding-left: 5px ;
 }
 
 /** Logo uses an image placeholder service with the featured image **/
@@ -270,30 +420,10 @@ li {
     padding: 10px;
 }
 
-h1 {
-    font-family: oswald;
-    font-size: 1em;
-    color:grey;
-    text-align: left;
-    padding-left: 1.5%;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #ccc, 
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
-}
 /************** CAROUSEL **********************/
 div#myCarousel.carousel.slide {
     position: relative;
-    margin-top: 6%;
+    margin-top: 9%;
 }
 /**************** MAIN  ****************/
 /** Format as margin, max-width, padding, border, box-shadow...for all the class in main  **/
@@ -301,6 +431,7 @@ main {
     margin: 6.5% auto 6%;
     max-width: 95%;
     padding: 5px;
+    margin-top: 12%;
 }
 
 .mySlides {
@@ -318,123 +449,18 @@ main {
     padding: 5% 0 5% 5%;
 }
 
-/**************** CONTENT ****************/
-/** Format as margin, position, width, border, color, background, text-shadow, box-shadow, line-height, font size, font family,...for all the class, the id, h1, h2, h3, rows, and columns in the content **/
-#content {
-    margin-top: 1.5% ;
-}
-#secondcontent {
-    margin-top: 1% ;
-}
-
-#thebestselling {
-    border-bottom: 1px solid #bbbbbb;
-    border-top: 1px solid #bbbbbb;
-    background-color: #e9e9e9;
-    margin-right: 1%;
-    margin-left: 1%;
-}
-
-select.filterProduct {
-    float: right;
-    margin-top: 5%;
-}
-div#filter {
-    /* margin-left: 1%; */
-    padding-left: 50%;
-    padding-top: 1%;
-}
-
-/** COLUMN FORMAT **/
-div .col-sm-3.well{
-    background-color: #ccc ;
-}
-div .well {
-    background-color: white ;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px -1px 2px -1px #999;
-    padding: 1% 1% 1% 1%;
-}
-div#well.alert.alert-success.fade.in{
-    background-color: white ;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px -1px 2px -1px #999;
-    padding: 1% 1% 1% 1%;
-}
-label#address, label#state, label#zip, label#city { 
-    margin-top: .5em; 
-    float: left;
-    display: block; 
-    width: 8em; 
-} 
-input#addressinput, input#stateinput { 
-    margin-top: .5em; 
-    float: left;
-    display: block; 
-    width: 100%; 
-    border-radius:5px;
-}
-input#zipinput { 
-    margin-top: .5em; 
-    margin-bottom: .5em; 
-    float: left;
-    display: block; 
-    width: 100%; 
-    border-radius:5px;
-}
-.select#cityinput {
-    margin-top: .5em; 
-    float: left;
-    display: block; 
-    width: 100%; 
-    height: 25px;
-    margin-top: 3%;
-    border-radius:5px;
-}
-select#foodsize.form-control-size, select#foodsize1.form-control-size, select#foodsize2.form-control-size, select#foodsize3.form-control-size {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    margin-bottom: 1.5%;
-    margin-top: 1.5%;
-    margin-left: 15%;
-    width:70%;
-    height:25px;
-    text-align: center;
-    margin-bottom: 1.5%;
-}
-div#our_mission.row {
-    background-color: white;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px -1px 2px -1px #999;
-    margin-bottom: 1%;
-    padding-top: 1%;
-    border-radius: 4px;
-}
-div#donate_now.row {
-    background-color: white;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px -1px 2px -1px #999;
-    margin-bottom: 1%;
-    padding-top: 1%;
-    border-radius: 4px;
-}
-div .col-sm-12.col-md-6.col-lg-3.well2 {
-    background-color: white ;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px -1px 2px -1px #999;
-    padding: 1% 1% 1% 1%;
-    width: 23%;
-    margin-left: 1%;
-    margin-right: 1%;
-    border-radius: 4px;
-}
-div .well h1 {
+/**************** MAIN  ****************/
+/** Format as margin, max-width, padding, border, box-shadow...for all the class in main  **/
+/**************  THE COLUMN FORMAT  **************/
+/** Format as margin, width, border, color, background, text-shadow, box-shadow, line-height, font size, font family,...for all the class, id, h1, h4, h5.. in the third column **/
+/** Upcoming Events format  **/
+h1 {
     font-family: oswald;
-    font-size: 1.5em;
-    color: black;
-    text-align: left;
-    padding-left: 1.5%;
-    line-height: 26px;
+    font-size: 3.5em;
+    color: #000000;
+    text-align: center;
+    /* border-bottom: 2px solid #ccc; */
+    font-weight: bold;
     text-shadow: 0 1px 0 #ccc, 
     0 2px 0 #c9c9c9,
     0 3px 0 #bbb,
@@ -448,6 +474,199 @@ div .well h1 {
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
 }
+/** H2 format  **/
+h2  {
+    font-family: oswald;
+    font-size: 1.5em;
+    color: #76ba1b;
+    text-align: center;
+
+}
+/** H3 format  **/
+h3  {
+    font-family: oswald;
+    font-size: 1.2em;
+    color: #000000;
+    text-align: center;
+    padding-left: 1.5%;
+}
+/** H4 format  **/
+h4  {
+    font-family: oswald;
+    font-size: 2.5em;
+    color: #76ba1b;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+    border-bottom: 1px dotted #666;
+}
+
+/** H4 format  **/
+h5  {
+    font-family: oswald;
+    font-size: 1.2em;
+    color: #000000;
+    text-align: center;
+}
+/** H6 format  **/
+h6  {
+    margin-top: 1%;
+    font-family: oswald;
+    font-size: 1.5em;
+    color: #76ba1b;
+    text-align: left;
+    border-bottom: 1px dotted #333;
+}
+
+h5.bestselling {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #fc8805;
+    text-align: left;
+    font-weight: bolder;
+    padding-bottom:1%;
+    padding-top:1%;
+    padding-left:1%;
+    border-bottom: 1px solid #bbbbbb;
+    border-top: 1px solid #bbbbbb;
+    background-color: #e9e9e9;
+}
+h5.allfoods, h5.allfoods1, h5.allfoods2, h5.sharecooking {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #fc8805;
+    text-align: left;
+    font-weight: bolder;
+    padding-bottom:1%;
+    padding-top:1%;
+    padding-left:1%;
+    border-bottom: 1px solid #bbbbbb;
+    border-top: 1px solid #bbbbbb;
+    background-color: #e9e9e9;
+}
+h5.lastnews {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #fc8805;
+    text-align: left;
+    font-weight: bolder;
+    padding-bottom:1%;
+    padding-top:1%;
+    padding-left:1%;
+    border-bottom: 1px solid #bbbbbb;
+    border-top: 1px solid #bbbbbb;
+    background-color: #e9e9e9;
+}
+
+section {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+div.col-sm-4 p {
+    text-align: center;
+}
+p {
+    font-family: oswald;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    padding-left: 0;
+    display: inline-block;
+}
+div.container-first {
+    margin-bottom: 1%;
+}
+div.container-second {
+    margin-bottom: 1%;
+}
+div.container-third {
+    margin-bottom: 1%;
+}
+div.container-four {
+    padding-left: 30%;
+    text-align: center;
+}
+
+div#built.row {
+    margin-bottom: 1%;
+}
+div.col-12.col-sm-12.col-md-4.col-lg-4 {
+    text-align: center;
+}
+div.col-12.col-sm-12.col-md-6.col-lg-6 {
+    text-align: center;
+}
+
+
+button.volunteer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 1.5%;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 1.5%;
+}
+
+button.volunteer:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    background-color: #76BA1B;
+    color: white;
+    margin-top: 1.5%;
+    width:100%;
+    height:40px;
+    text-align: center;
+    margin-bottom: 1.5%;
+    box-shadow: 1px 1px 3px #BEBEBE inset;
+}
+
+/** COLUMN FORMAT **/
+
+div.col-sm-12.col-md-3.col-lg-3.well2 {
+    background-color: white ;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px -1px 2px -1px #999;
+    padding: 1% 1% 1% 1%;
+}
+div.col-sm-12.col-md-4.col-lg-2.wellallfoods {
+    background-color: white ;
+    border: 2px solid rgb(160, 158, 158);
+    padding: 1% 1% 1% 1%;
+}
+div.col-sm-12.col-md-4.col-lg-2.wellallfoods:hover {
+    background-color: white ;
+    border: 2px solid #fc8805;
+    padding: 1% 1% 1% 1%;
+}
+div.col-sm-12.col-md-6.col-lg-6.welllastnews {
+    border: 1px solid rgb(160, 158, 158);
+    box-shadow: 1px -1px 2px -1px #999;
+    padding: 1% 1% 1% 1%;
+}
+div.col-12.col-sm-12.col-md-3.col-lg-3 {
+    border: 2px solid rgb(204, 204, 204);
+    text-align: center;
+}
+div.col-12.col-sm-12.col-md-3.col-lg-3:hover {
+    border: 2px solid #fc8805;
+    text-align: center;
+}
+
 /** h3 format as margin, font size, padding, text align, color,... **/
 h2.linkshare {
     font-family: oswald;
@@ -469,27 +688,12 @@ h2.linkshare {
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
 }
-/** h3 format as margin, font size, padding, text align, color,... **/
-div div div h3 {
-    font-family: oswald;
-    font-size: 14px;
-    color: #333;
-    text-align: left;
-    padding-left: 1.5%;
-    font-weight: bolder;
-}
-h3 span.label-ship:nth-of-type(1) {
-    font-family: oswald;
-    font-size: 14px;
-    color: green;
-    text-align: left;
-    padding-left: 1.5%;
-}
+
 
 img.img-linknetwork {
     width:17px;
     height:17px;
-    margin-top: -2%;
+    margin-top: -1%;
 }
 div h3 img.star {
     width:13px;
@@ -503,92 +707,18 @@ img.star {
     margin-top: 5%;
 }
 
-#basic-coverage {
-    width:97%;
-    float: left;
-    font-size: 13px;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    margin-bottom: 1.5%;
-    padding-left: 1.5%;
-    margin-left: 1.5%;
-}
+
 /** P format as margin, padding, font size, font family,... **/
 div div div p {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
-    color: #91a4b2;
-    text-align: left;
+    color: #333333;
+    text-align: center;
     padding-left: 1.5%;
     margin-bottom: 1.5%;
-}
-/**  Button format  **/
-button.btn.btn-outline-success {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    background-color: #999999;
-    color: white;
-    text-align: center;
-    margin-bottom: 1.5%;
-    margin-top: 1.5%;
-    width:70%;
-    box-shadow: 1px 1px 3px  #BEBEBE inset;
-}
-/**  Button format when move the mouse on  **/
-button.btn.btn-outline-success:hover {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    background-color: #666666;
-    color: white;
-    text-align: center;
-    margin-bottom: 1.5%;
-    width:70%;
-    box-shadow: 1px 1px 3px  #BEBEBE inset;
-    margin-top: 1.5%;
+
 }
 
-/***************  BOOK APOINMENT  ***************/
-/** Format as margin, width, border, color, background, text-shadow, box-shadow, line-height, font size, font family,...for all the class, id, h1, h2,.. in the Book Appoinment **/
-div div div h2 {
-    font-family: oswald;
-    font-size: 3.2em;
-    color: #fc8f01;
-    text-align: center;
-    padding-left: 1.5%;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #ccc, 
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
-}
-div div div h6 {
-    font-family: oswald;
-    font-size: 3.2em;
-    color: #76ba1b;
-    text-align: center;
-    padding-left: 1.5%;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #ccc, 
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
-}
 button.addtocart {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
@@ -618,221 +748,30 @@ button.addtocart:hover {
     margin-bottom: 1.5%;
     box-shadow: 1px 1px 3px  #BEBEBE inset;
 }
-button.subscribe {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 1.5%;
-    width: 100%;
-    height: 25px;
-    text-align: center;
-    margin-bottom: 1.5%;
-    width:70%;
 
-}
-
-button.subscribe:hover {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    background-color: #fcfcfc;
-    color: #fc8805;
-    margin-top: 1.5%;
-    width:100%;
-    height:25px;
-    text-align: center;
-    margin-bottom: 1.5%;
-    box-shadow: 1px 1px 3px  #BEBEBE inset;
-}
-button.our_mission {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    margin-top: 1.5%;
-    height:60%;
-    text-align: center;
-    margin-bottom: 1.5%;
-    width:40%;
-    margin-left:35%;
-}
-button.our_mission:hover {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    background-color: #fcfcfc;
-    color: #fc8805;
-    margin-top: 1.5%;
-    width:40%;
-    height:60%;
-    text-align: center;
-    margin-bottom: 1.5%;
-    margin-left:35%;
-    box-shadow: 1px 1px 3px  #BEBEBE inset;
-}
-button.our_mission:hover {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    background-color: #fcfcfc;
-    color: #fc8805;
-    margin-top: 1.5%;
-    width:40%;
-    height:60%;
-    text-align: center;
-    margin-bottom: 1.5%;
-    margin-left:35%;
-    box-shadow: 1px 1px 3px  #BEBEBE inset;
-}
-button.donate_now {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    margin-top: 1.5%;
-    height:60%;
-    text-align: center;
-    margin-bottom: 1.5%;
-    width:40%;
-    margin-left:35%;
-}
-button.donate_now:hover {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    background-color: #fcfcfc;
-    color: #fc8805;
-    margin-top: 1.5%;
-    width: 40%;
-    height:60%;
-    text-align: center;
-    margin-bottom: 1.5%;
-    margin-left:35%;
-    box-shadow: 1px 1px 3px  #BEBEBE inset;
-}
-
-
-/************ RADIO *************/
-strong {
-    font-weight: 700;
-    margin-left: 2%;
-}
-.checkbox label, .radio label {
-    padding-left: -5px;
-    cursor: pointer;
-    margin-right: 6%;
+/******* SEE ALL ********/
+/** See all format as float, font size, line height, color, font weight, padding, font family **/
+#see-all, #see-all1 {
+    float: right; 
+    font-size: 1em;
+    line-height: 15px;
+    color: #666;
     font-weight: bolder;
+    padding-right: 1%;
+    padding-top: 1%;   
+    font-family: 'Open Sans', sans-serif;
 }
-div#filter {
-    padding-left: 40%;
-    padding-top: 1%;
-}
-
-/**************  THE COLUMN FORMAT  **************/
-/** Format as margin, width, border, color, background, text-shadow, box-shadow, line-height, font size, font family,...for all the class, id, h1, h4, h5.. in the third column **/
-/** Upcoming Events format  **/
-div div div h1 {
-    font-family: oswald;
-    font-size: 1.5em;
+/** See all format as float, font size, line height, color, font weight, padding, font family when moving the mouse **/
+#see-all:hover {
+    float: right; 
+    font-size: 1em;
+    line-height: 15px;
     color: #fc8805;
-    text-align: center;
-    padding-left: 1.5%;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #ccc, 
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
-}
-/** H4 format  **/
-div div div h4  {
-    font-family: oswald;
-    font-size: 2em;
-    color: #fc8805;
-    text-align: center;
-    padding-left: 1.5%;
-    text-shadow: 0 1px 0 #ccc, 
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
-}
-/** H5 format  **/
-div div div h5  {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.2em;
-    color: #fc8805;
-    text-align: left;
     font-weight: bolder;
-
-}
-
-/**************  THE DISCRIPTION PRODUCTS FORMAT  **************/
-/** H5 format as font family, font size, color, padding in disscription foods **/
-h5.foodsgallery  {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
-    color: #fc8805;
-    text-align: left;
-    font-weight: bolder;
-    padding-bottom: 0.5%;
-    padding-left:1%;
-
-}
-h5.description {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
-    color: #fc8805;
-    text-align: left;
-    font-weight: bolder;
-    padding-bottom:1%;
-    padding-top:1%;
-    padding-left:1%;
-    border-bottom: 1px solid #bbbbbb;
-    border-top: 1px solid #bbbbbb;
-    background-color: #e9e9e9;
-}
-h5.allfoods {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
-    color: #fc8805;
-    text-align: left;
-    font-weight: bolder;
-    padding-bottom:1%;
-    padding-top:1%;
-    padding-left:1%;
-    border-bottom: 1px solid #bbbbbb;
-    border-top: 1px solid #bbbbbb;
-    background-color: #e9e9e9;
-    margin-top: 1%;
-}
-
-/** P format as font family, font size, color, padding in disscription product **/
-p.fooddetails > span {
-    float: right;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-/** Create a background color for odd line format**/
-p.fooddetails:nth-child(odd) {
-    background: #ccc;
-}
-
-section div div div p {
-    font-family: oswald;
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-    padding-left: 0;
-    display: inline-block;
+    padding-right: 1%;
+    padding-top: 1%;    
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
 }
 
 
@@ -846,7 +785,7 @@ footer
     height: 100%;
     margin-top: auto;
     background:#e1e1e1;
-    border-top: 5px solid #535d66;
+    border-top: 20px solid #76BA1B;
 
 }
 /** id copyright format as margin, position, width, border, background, position **/
@@ -872,29 +811,9 @@ footer
     position:relative;
     height: 100%;
 }
-/** Class social format as right, position, top **/
-div#social.col-sm-6 
-{
-    position:absolute;
-    float: right;
-    margin-top: 0.5%;
-    width: 30%;
-    margin-left: 70%;
-}
-/** A format as transition, opacity, display, float of <a> in class social **/
-div#copyright .col-sm-7
-{
-    transition: opacity .25s ease;
-    opacity: 0.3;
-    margin-left: 12px;
-    display:block;
-    float:left;
-    margin-top: 1.5%;
 
-}
-div#copyright .col-sm-7
-    opacity: 0.7;
-}
+/** A format as transition, opacity, display, float of <a> in class social **/
+
 a
 {
     color: #76ba1b;
@@ -918,249 +837,9 @@ a:hover
     margin: auto;
 }
 
-/*************** GALLERY FORMAT ***************/
-/** Format as margin, padding, width, height, border, color, background, line-height, font size, font family, position,...for all the class, id, a.. in the gallery **/
-* {
-    box-sizing: border-box;
-}
-/* Position the image container (needed to position the left and right arrows) */
-.col-sm-12 {
-    position: relative;
-    margin: auto;
-    width:100%;
-    margin-bottom: 2%;
-}
-
-/* Image text format as background-color, padding, color, font-size, font-weight */
-.caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: #fc8805;
-    font-size: 16px;
-    font-weight: bold;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/* Five columns side by side display images in the gallery*/
-.column {
-    float: left;
-    width: 18%;
-    padding-right: 1%;
-    margin-left: 1.8%;
-    margin-top: 2%;
-}
-
-/******* SEE ALL ********/
-/** See all format as float, font size, line height, color, font weight, padding, font family **/
-#see-all, #see-all1 {
-    float: right; 
-    font-size: 13px;
-    line-height: 15px;
-    color: #666;
-    font-weight: bolder;
-    padding-right: 1%;
-    padding-top: 1%;   
-    font-family: 'Open Sans', sans-serif;
-}
-/** See all format as float, font size, line height, color, font weight, padding, font family when moving the mouse **/
-#see-all:hover {
-    float: right; 
-    font-size: 13px;
-    line-height: 15px;
-    color: #fc8805;
-    font-weight: bolder;
-    padding-right: 1%;
-    padding-top: 1%;    
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-}
-
 /** Set up another version using @media **/
 /** Build out media query to make navigation responsive **/
 /** A format as padding, background, color, display, position, width, margin.... for the all button, images, texts, class, and id when changing device **/
-@media only screen and (max-width: 800px) {		 	
-    /** Make the menu button visible **/
-
-    header .Topbar {
-        height: 20%;
-        margin-top: -5%;
-        margin-left: 65%;
-    }
-
-    .ContactTop {
-        display: none;
-    }
-    .Info {
-        display: none;
-    }
-    .Tell {
-        display: none;
-    }
-    .signin {
-        display:none;
-    }
-    .login {
-        display:none;
-    }
-    div div div h3 {
-        font-family: oswald;
-        font-size: 14px;
-        color: #333;
-        text-align: center;
-        font-weight: bolder;
-    }
-    div div div h1 {
-        font-family: oswald;
-        font-size: 14px;
-        color: #333;
-        text-align: left;
-        font-weight: bolder;
-    }
-    /* Change the button when changing device mobile   */
-    .buttonsearch {
-        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
-        /* padding-top: 5px; */
-        background:none #BEBEBD;
-        border-color: #EBE8DE;
-        text-shadow:none;
-        color: white;
-        width: 70px;
-        height: 30px;
-        margin: 0 auto;
-        font-size: 11px;
-        display: block;
-        float: right;
-        text-decoration:none;
-        border-radius:3px;
-    }
-    .buttonsearch:hover {
-        background:none #333333;
-        border-color: #EBE8DE;
-        text-shadow:none;
-        color: #fc8805;
-        width: 70px;
-        height: 30px;
-        border-radius:5px;
-        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
-    }
-    
-    input.sitesearch
-    {
-        padding-top: 0;
-        border-color: 2px grey;
-        width: 150px;
-        height: 30px;
-        background: #333333;
-        border-radius:3px;
-        margin: 0 auto;
-        font-size: 11px;
-        display: block;
-        float: left;
-    }
-
-
-    /** A format as background-color, border, width, position,font-size,.. in header **/
-    header {
-        height: 30%;
-    }
-    #menu-icon {
-        Display: inline-block;
-        width: 100%;
-        height: 50%;
-        font-size: 35px;
-        text-align: center;
-        margin-right: 1%;
-        margin-top: 10%;
-        display: block;
-    }
-    /** Logo uses an image placeholder service with the featured image **/
-    #logo {
-        margin-top: 10%
-        width: 50px;
-        display: block;
-    }
-    nav ul {
-        /** Hide the horizontal navigation list for small screens **/
-        display: none;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        border: 1px solid #333;
-        line-height: 14px;
-        right: 0;
-        width: 50%;
-    }
-    nav li {
-        /** Stack the navigation links vertically **/
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    /** Reveal the navigation menu when the hamburger button is hovered over **/
-    nav:hover ul {
-        display: block;
-        margin-top: -10%;
-    }
-    nav:hover ul a {
-        /**  Make the links wider for greater accessibility with touch **/
-        display: block;
-        padding: 5%;
-        font-size: .8em;
-    }
-    /** the color of the hamburger menu button on hover for better visual feedback **/
-    nav:hover #menu-icon {
-        color: #fc8805;
-    }
-    /**Main**/
-    main {
-        margin-top: 20% ;
-    }
-    div.col-sm-12.col-md-6.col-lg-3.well2 {
-        width: 100%;
-    }
-    #gallery{
-        margin-top:20%
-    }
-    .navbar-form .form-group
-    {
-        margin-top:-12%;
-        width:45%;
-    }
-    .container-fluid {
-        text-align: center;
-    }
-    /* Next & previous buttons */
-    a.prev,
-        a.next {
-        font-size: 15px;
-    }
-    /* Position the "next button" to the right */
-    a.next {
-        right: 5%;
-        border-radius: 3px 0 0 3px;
-    }
-    /* Number text format as color, font-size, padding, margin, position, background display on the image */
-    .numbertext {
-        font-size: 10px;
-    }
-    /******* FOOTER ******/
-    footer
-    {
-        width:100%;
-        height: 100%;
-        margin-bottom: 5%;
-    }
-    div#social.col-sm-6 {
-        margin-left: 30%;
-        padding-top:15%;
-        width: 50%;
-    }
-}
-
-
 
 @media only screen and (max-width: 640px) {		 	
     /** Make the menu button visible **/
@@ -1168,7 +847,7 @@ a:hover
     header .Topbar {
         height: 20%;
         margin-top: -10%;
-        margin-left: 35%;
+        margin-left: 45%;
     }
 
     .ContactTop {
@@ -1180,7 +859,7 @@ a:hover
     .Tell {
         display: none;
     }
-    .signin {
+    .register {
         display:none;
     }
     .login {
@@ -1250,8 +929,8 @@ a:hover
     #menu-icon {
         Display: inline-block;
         width: 100%;
-        height: 50%;
-        font-size: 35px;
+        height: 100%;
+        font-size: 20px;
         text-align: center;
         margin-right: 1%;
         margin-top: 10%;
@@ -1259,8 +938,8 @@ a:hover
     }
     /** Logo uses an image placeholder service with the featured image **/
     #logo {
-        margin-top: 10%
-        width: 50px;
+        margin-top: 10%;
+        width: 150px;
         display: block;
     }
     nav ul {

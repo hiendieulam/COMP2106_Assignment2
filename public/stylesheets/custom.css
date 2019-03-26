@@ -1,0 +1,658 @@
+￼/* Custom CSS */
+body {
+  font: 100%/1.2 'times', Arial, Helvetica, sans-serif;
+  color: #333;
+  width:100%;
+  background-color: #b9b9b9;
+  line-height: 28px;
+}
+
+@font-face {
+	font-family: 'times';
+	src: url('../fonts/times-webfont.woff2') 
+		format('woff2'),
+		url('../fonts/times-webfont.woff') 
+		format('woff');
+}
+
+/** Image responsiveness when changing the device used **/
+img {
+  width: 100%;
+}
+section {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.container {
+  margin-top :50px;
+  width: 100%;
+}
+div.container {
+margin-top: 1%;
+}
+
+/**************** HEADER ****************/
+/** A format as background-color, border, width, position,font-size,.. in header **/
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  font-size: 1em;
+  font-family: oswald;
+}
+header li a {
+  font-size: 0.85em;
+  font-family: oswald;
+}
+.btn.btn-outline-secondary {
+  background-color: #660066;
+  border-color: white;
+}
+
+/**************** HEADER ****************/
+/** A format as background-color, border, width, position,font-size,.. Sub Navigation **/
+#sub_navbar {
+  background-color: rgba(150, 147, 147, 0.9);
+  width: 100%;
+  font-size: 1em;
+  font-family: oswald;
+  color: black;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  float: right;
+
+}
+#sub_navbar a {
+  font-size: 1em;
+  font-family: oswald;
+  color: black;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+/**************** CONTENT ****************/
+/** A format as background-color, border, width, position,font-size,.. left column **/
+#advleft {
+  background-color: white ;
+  border: 1px solid #C2C2C2;
+  padding: 1% 1% 1% 1%;
+  border-radius: 5px;
+  height: 90%;
+}
+.left {
+  padding: 1% 1% 1% 1%;
+  border-radius: 5px;
+}
+.left h1 {
+  font-family: oswald;
+  font-size: 1.4em;
+  color: #660066;
+  text-align: left;
+  padding-left: 1.5%;
+  line-height: 35px;
+  text-shadow: 0 1px 0 #ccc, 
+  0 2px 0 #8F0963,
+  0 3px 0 #660808,
+  0 4px 0 #3C041C,
+  0 5px 0 #380120,
+  0 6px 1px rgba(206, 1, 144, 0.17),
+  0 0 5px rgba(75, 6, 49, 0.1),
+  0 1px 3px rgba(75, 4, 4, 0.3),
+  0 3px 5px rgba(255, 6, 143, 0.2),
+  0 5px 10px rgba(150, 3, 101, 0.25),
+  0 10px 10px rgba(84, 2, 52, 0.2),
+  0 20px 20px rgba(55, 0, 26, 0.15);
+}
+div #advleft h2 {
+  font-family: oswald;
+  font-size: 1.2em;
+  color: red;
+  text-align: left;
+  padding-left: 1.5%;
+  line-height: 26px;
+}
+/** h2 format as margin, font size, padding, text align, color,... **/
+h2.linkshare {
+  font-family: oswald;
+  font-size: 1.2em;
+  color: red;
+  text-align: left;
+  padding-left: 1.5%;
+  font-weight: bold;
+}
+/** h3 format as margin, font size, padding, text align, color,... **/
+h3 {
+  font-family: oswald;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  padding-left: 1.5%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+h3 span.label-ship:nth-of-type(1) {
+  font-family: oswald;
+  font-size: 14px;
+  color: green;
+  text-align: left;
+  padding-left: 1.5%;
+}
+/** A format as width, height,...for img**/
+img.img-linknetwork {
+  width:17px;
+  height:17px;
+  margin-top: -2%;
+}
+img.star {
+  width:13px;
+  height:13px;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+/** A format as margin, padding, float, width,...for #readbook, #choosebook, #qtybook **/
+#readbook, #choosebook, #qtybook {
+  width:97%;
+  float: left;
+  font-size: 13px;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  margin-bottom: 1.5%;
+  padding-left: 1.5%;
+  margin-left: 1.5%;
+}
+/** P format as margin, padding, font size, font family,... **/
+.left p {
+	font-family: 'times';
+  font-size: 2em;
+  color: black;
+  text-align: left;
+  padding-left: 1.5%;
+  margin-bottom: 1.5%;
+}
+/** Button format format as margin, padding, font size, font family,... **/
+button.btn.btn-outline-success {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  background-color: #330033;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5%;
+  margin-top: 1.5%;
+  margin-left: 0;
+  width:95%;
+  box-shadow: 1px 1px 3px  #BEBEBE inset;
+  border-color: white;
+}
+/**  Button format when move the mouse on  **/
+button.btn.btn-outline-success:hover {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  background-color: #660066;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5%;
+  margin-left: 0;
+  width:95%;
+  box-shadow: 1px 1px 3px  #BEBEBE inset;
+  margin-top: 1.5%;
+  border-color: white;
+}
+div .col-sm-3 {
+  padding: 1% 1% 1% 1%;
+}
+/* Next & previous buttons */
+a.prev,
+a.next {
+font-size: 15px;
+}
+/* Position the "next button" to the right */
+a.next {
+   right: 5%;
+   border-radius: 3px 0 0 3px;
+   float: right;
+}
+a.pre {
+  float:left;
+  border-radius: 3px 0 0 3px;
+}
+.leftbookslide {
+  margin-top: 0;
+  margin-left: 35%;
+  font-family: oswald;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+/** #advert h1 format format as margin, padding, font size, font family,... **/
+#advert h1 {
+  font-family: oswald;
+  font-size: 2.2em;
+  color: black;
+  text-align: left;
+  padding-left: 2%;
+  padding-top: 2%;
+  line-height: 35px;
+  text-shadow: 0 1px 0 #ccc, 
+  0 2px 0 #c9c9c9,
+  0 3px 0 #bbb,
+  0 4px 0 #b9b9b9,
+  0 5px 0 #aaa,
+  0 6px 1px rgba(0,0,0,.1),
+  0 0 5px rgba(0,0,0,.1),
+  0 1px 3px rgba(0,0,0,.3),
+  0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
+}
+/** #advert h2 format format as margin, padding, font size, font family,... **/
+#advert h2{
+  font-family: oswald;
+  font-size: 1.5em;
+  color: #660066;
+  text-align: left;
+  padding-left: 2%;
+  line-height: 26px;
+  border-bottom: 1px solid #999; 
+  padding: 2% 2% 2% 2%;
+  width:95%;
+}
+/** #advert h3 format format as margin, padding, font size, font family,... **/
+#advert h3  {
+  font-family: oswald;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  padding-left: 2%;
+}
+/** #advert h3 span format format as margin, padding, font size, font family,... **/
+#advert h3 span.label-ship:nth-of-type(1) {
+  font-family: oswald;
+  font-size: 1em;
+  color: green;
+  text-align: left;
+  padding-left: 2%;
+}
+#advert p {
+  font-size: 1em;
+  color: #333;
+  text-align: left;
+  padding-left: 2%;
+}
+
+/**************  THE DISCRIPTION PRODUCTS FORMAT  **************/
+/** h5.bestsellers format as font family, font size, color, padding,.. **/
+h5.bestsellers  {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  color: #330033;
+  text-align: center;
+  padding-left: 1.5%;
+  font-weight: bolder;
+  border-bottom: 2px solid #999; 
+  padding: 2% 2% 2% 2%; 
+  width:95%;
+}
+/** h4.bestsellers format as font family, font size, color, padding,.. **/
+h4.bestsellers  {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1em;
+  color: #483378;
+  text-align: center;
+  font-weight: bolder;
+  margin-right: 5%;
+}
+/** p format as font family, font size, color, padding,.. **/
+p  {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  color: #666;
+  text-align: center;
+  padding-left: 1.5%;
+}
+
+/* Using your browser's DOM Inspector, figure out how the default .carousel-caption is positioned with CSS, and change it */
+.carousel-caption {
+	top: 5%;
+	left: 1%;
+}
+.carousel-indicators {
+	top: 90%;
+}
+#carousel-ptl {
+  margin-top: 8%;
+}
+.carousel-control-prev {
+  width: 10%;
+  height:10%;
+  padding-top: 20%;
+}
+.carousel-control-next {
+  width: 10%;
+  height:10%;
+  padding-top: 20%;
+}
+/** h5.section-heading format as font family, font size, color, padding,... **/
+h5.section-heading  {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  color: #210037;
+  text-align: center;
+  padding-left: 1.5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-weight: bolder;
+}
+
+
+/**************  THE MEDIA AND CAROSEL FORMAT  **************/
+/** media size format as main and max of 300px, 500px,... **/
+/** carosel format as font family, font size, color, padding ,... **/
+
+@media (max-width: 300px) {
+  .carosel-item {
+    width: 80%;
+  }
+}
+@media (min-width: 300px) {
+  .carosel-item {
+    width: 50%;
+  }
+}
+@media (min-width: 500px) {
+  .carosel-item {
+    width: 33.333%;
+  }
+}
+@media (min-width: 768px) {
+  .carosel-item {
+    width: 25%;
+  }
+}
+.carosel {
+  position: relative;
+}
+.carosel-inner {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.carosel-item {
+  display: inline-block;
+}
+.carosel-control {
+  position: absolute;
+  top: 50%;
+  padding: 15px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  display: inline-block;
+}
+/** .carosel-control-left as font family, font size, color, padding ,... **/
+.carosel-control-left {
+  left: 15px;
+  margin-top: 25%;
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 1% 1% 1% 1%;
+}
+/** .carosel-control-right as font family, font size, color, padding ,... **/
+.carosel-control-right {
+  right: 15px;
+  margin-top: 25%;
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 1% 1% 1% 1%;
+}
+/** .carosel-control:active,hover as colors, text,... **/
+.carosel-control:active,
+.carosel-control:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+/** .price as colors, text,... **/
+.price {
+  font-size: 13px;
+  font-weight: bolder;
+  margin-left: 1%;
+  margin-right: 10%;
+  margin-top:5%
+}
+button.btnBestsel {
+  float: right;
+  background-color: none;
+  border-radius: 1px 0 0 1px;
+}
+button.btnBestsel:hover {
+  float: right;
+  border-radius: 1px 0 0 1px;
+  transition: 0.s
+}
+.col-lg-12 {
+  padding-bottom: 1%;
+}
+.col-md-offset-1 {
+  margin-left: auto;
+}
+.col-sm-3 {
+  margin-left: auto;
+}
+.col-md-8 {
+  margin-left: auto;
+}
+.row p {
+  padding-left: 1%;
+  padding-top: 1%;
+}
+/** h2 as font family, font size, color, padding ,... **/
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-left: 1%;
+  padding-top: 1%;
+  color: #210037;
+  border-bottom: 1px solid #999; 
+  padding: 2% 2% 2% 2%; 
+  width:95%;
+}
+
+/**************  THE THRITH COLUMN FORMAT  **************/
+/** carosel format as font family, font size, color, padding ,... **/
+#adv2, #adv3, #adv4, #adv5, #adv6, #adv7, #adv8 {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+/** GENRS format as font family, font size, color, padding ,... **/
+.product_story {    
+  font-size: 13px;
+  color: #666666;
+}
+
+div #right_gen {
+  background-color: white;
+  margin: 17% 1% 1% 5%;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+#right_gen > div > div {
+  display: inline-block;
+  text-align: center;
+  margin: 0 50px 20px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#right_gen > div > div > img {
+  width: 100%;
+}
+
+#right_gen > div > div:first-child{
+  margin-left: 20%;
+}
+#right_gen > p.product_story {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 0!important;
+}
+
+#right_gen > p.product_story > span {
+  float: right;
+}
+
+#right_gen > p.product_story:nth-child(odd) {
+  background: #ccc;
+}
+
+#right_gen > div > div > a {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ff6600;
+  font-size: 14px;
+
+}
+
+/** OTHERS format as font family, font size, color, padding ,... **/
+
+.product_story {    
+  font-size: 12px;
+  color: #666666;
+}
+a.product_story {    
+  font-size: 12px;
+  color: #666666;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+div #other {
+  background-color: white;
+  margin: 5% 5% 5% 5%;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#other > div > div {
+  display: inline-block;
+  text-align: center;
+}
+
+.text-center {text-align: center}
+
+#other > div > div > img {width: 100%}
+
+#other > div > div:first-child{
+  margin-left: 20%;
+}
+#other > p.product_story {
+  padding-right: 1%;
+  margin-bottom: 0!important;
+  border-bottom: 1px solid #999; 
+  padding: 3% 2% 6% 2%; 
+}
+
+button.btn {
+  float: right;
+}
+button.btn:hover {
+  float: right;
+  background-color: #999;
+}
+#other > div > div > a {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ff6600;
+  font-size: 14px;
+}
+img.cart {
+  margin-left:5%;
+}
+
+/************** FOOTER **************/
+/** Format as margin, padding, width, height, border, color, background, line-height, font size, font family, position,...for all the class, id, a.. in the footer **/
+footer p {
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 0;
+  color:white;
+  font-size: 0.8em;
+  text-align: center;
+}
+/** id copyright format as margin, position, width, border, background, position **/
+#copyright
+{
+    background: #f7f7f7;
+    height:60px;
+    position:relative;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding-bottom: 15px;
+    border-top: 5px solid #333;
+}
+/** Class wrapper format as margin, position, width, height, background, position, font-family **/
+#copyright .wrapper
+{
+    font-family: 'Open Sans', sans-serif;
+    padding-top:10px;
+    color: white;
+    font-size:12px;
+    font-weight: bolder;
+    position:relative;
+    height: 100%;
+}
+
+#copyright .wrapper .social a:hover
+{
+    opacity: 0.7;
+}
+#copyright .wrapper a
+{
+    color: white;
+}
+
+#copyright .wrapper a:hover
+{
+    color: #330033;
+}
+/** Class hidden format as position **/
+.hidden
+{
+    position:absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6 & 7 */
+        clip: rect(1px, 1px, 1px, 1px);
+}
+/** Class top format as float right and margin auto when user click to this button the website will go to the top of page  **/
+.top {
+    float: right;
+    margin: auto;
+}
+
+/* View the result in the browser, then head back to index.html */
+/* The below class and animation keyframes are used by the JavaScript */
+.zoomit {
+	animation: zoom-in-out .5s;
+}
+@keyframes zoom-in-out {
+	from {
+		transform: none;
+	}
+	50% {
+		transform: scale(1.4);
+		transform-origin: center top;
+	}
+	to {
+		transform: none;
+	}
+}

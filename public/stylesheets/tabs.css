@@ -1,0 +1,104 @@
+body { 
+	margin: 0; 
+	padding: 0; 
+	background: #ccc;
+	font: 100%/1 Helvetica, Arial, sans-serif;
+	color:#000;
+	line-height: 28px;
+}
+
+div.containertab { 
+	margin: auto; 
+}
+div.row {
+	/* border-bottom: 1px solid #ccc; */
+	padding-bottom: 1%;
+}
+h1 {
+	text-shadow: 0 1px 0 #eee;
+
+}
+ul.tabNavigation {
+    list-style: none;
+    margin: 0 0 0 1%;
+	padding: 0;
+	margin-bottom: 1%;
+	font-family: oswald;
+
+}
+
+ul.tabNavigation li {
+    display: inline;
+	margin: 0;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	font-family: oswald;
+}
+
+ul.tabNavigation li a {
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    background-color: #ddd;
+    color: #000;
+    text-decoration: none;
+	border: 1px solid #888;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	font-family: oswald;
+	border-bottom: 1px solid #FFF;
+}
+
+ul.tabNavigation li a:hover {
+	background-color: #eee;
+	border-bottom: 1px solid #FFF;
+}	
+
+ul.tabNavigation li a.selected {
+    background-color: #FFF;
+	color: #333;
+	border-top: 3px solid #76ba1b;
+	border-bottom: 1px solid #FFF;
+	font-family: oswald;
+}
+
+ul.tabNavigation li a:focus {
+	outline: 0;
+}
+
+div.tabs > div {
+	padding: 25px;
+	border: 1px solid #888;
+    background-color: #FFF;
+	border-radius: 5px;
+
+}
+div.col-sm-12.col-md-9.col-lg-9 {
+	float: left;
+}
+div.col-12.col-sm-12.col-md-1.col-lg-1 {
+	padding: 0 0 0 0 ;
+}
+div.tabs > div h2 {
+	margin-top: 0;
+}
+		
+.waste {
+	min-height: 1%;
+}
+
+#public_date, #public_date1, #public_date2, #public_date3, #public_date4, #public_date5{    
+    float: left;
+	color: rgb(253, 125, 5);
+	font-size: .8em;
+	text-decoration: none;
+}
+/* #first_register {
+	margin-top: 5%;
+	padding-top: 10%;
+} */
+
+
+#second {
+    display: block;
+    /* text-align: left; */
+    margin-top: o;
+}

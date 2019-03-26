@@ -5,8 +5,8 @@ const Product = require('../models/products');
 /* GET users listing. */
 router.get('/', (req, res, next) => {
 	Product.find({}).then(products => {
-		res.render('products', {
-			title: 'Products',
+		res.render('all-foods', {
+			title: 'All Foods',
 			products: products
         });
     });

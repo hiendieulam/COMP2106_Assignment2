@@ -8,4 +8,18 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* GET register and login page. */
+router.get('/about-us', function(req, res, next) {
+  res.render('about-us', {
+    title: 'About Us'
+  });
+});
+
+/* GET register and login page. */
+router.get('/register-login', function(req, res, next) {
+  res.render('register-login', {
+    title: 'User'
+  });
+});
+
 module.exports = router;
