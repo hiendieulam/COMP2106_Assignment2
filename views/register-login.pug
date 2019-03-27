@@ -14,7 +14,7 @@ block content
                                 a(href='#second') Login
                         #first
                             .row
-                                form(action='#')
+                                form(method = "post")
                                     fieldset
                                         p Enter your personal details to create an account
                                         .col-12.col-sm-12.col-md-12.col-lg-12
@@ -36,20 +36,20 @@ block content
                                                 .col-12.col-sm-12.col-md-1.col-lg-1
                                                     label Reapeat Pass
                                                 .col-12.col-sm-12.col-md-4.col-lg-5
-                                                    input#repassword(type='password', name='repassword', style='width: 100%;')
+                                                    input#repassword(type='password', style='width: 100%;')
                                                 .col-12.col-sm-12.col-md-4.col-lg-4
                                                     label(style='float: left;') * Please enter your Password
                                         .col-12.col-sm-12.col-md-12.col-lg-12
                                             .row
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     a(href='https://www.facebook.com/')
-                                                        img.d-inline-block.align-top(src='images/signinbyface.jpg', style='width:100%;', alt='details')
+                                                        img.d-inline-block.align-top(src='/images/signinbyface.jpg', style='width:100%;', alt='details')
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     label(style='float: left;') * Sign in with Facebook
                                             .row
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     a(href='https://www.google.com/')
-                                                        img.d-inline-block.align-top(src='images/singinbygoogle.jpg', style='width:100%;', alt='details')
+                                                        img.d-inline-block.align-top(src='/images/singinbygoogle.jpg', style='width:100%;', alt='details')
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     label(style='float: left;') * Sign in with Goolge
                                             p By creating an account you agree to our Term & Privacy
@@ -79,13 +79,13 @@ block content
                                             .row
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     a(href='https://www.facebook.com/')
-                                                        img.d-inline-block.align-top(src='images/signinbyface.jpg', style='width:100%;', alt='details')
+                                                        img.d-inline-block.align-top(src='/images/signinbyface.jpg', style='width:100%;', alt='details')
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     label(style='float: left;') * Sign in with Facebook
                                             .row
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     a(href='https://www.google.com/')
-                                                        img.d-inline-block.align-top(src='images/singinbygoogle.jpg', style='width:100%;', alt='details')
+                                                        img.d-inline-block.align-top(src='/images/singinbygoogle.jpg', style='width:100%;', alt='details')
                                                 .col-12.col-sm-12.col-md-6.col-lg-6
                                                     label(style='float: left;') * Sign in with Goolge
                                             a(href='#') Forgot your Password? CLICK HERE

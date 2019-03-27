@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const Carousel = require('../models/carousels');
+const User = require('../models/users');
 
 
 /* GET home page. */
@@ -33,8 +34,9 @@ router.get('/register-login', function(req, res, next) {
 /* POST request for the add an user. */
 router.post('/register-login', (req, res, next) => {
   const addUser = new User(req.body);
+  console.log(addUser);
   addUser.save().then(() => {
-    res.redirect('/register-login');
+    res.redirect('/users');
   });
 });
 
