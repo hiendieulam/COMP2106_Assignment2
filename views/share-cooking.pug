@@ -6,13 +6,13 @@ block content
                 // Create carousel-inner
                 .carousel-inner
                     figure.carousel-item
-                        img.d-block.w-100(src='images/Banner_Art_1920_814.png', alt='Third slide')
+                        img.d-block.w-100(src='/images/Banner_Art_1920_814.png', alt='Third slide')
                     figure.carousel-item
-                        img.d-block.w-100(src='images/Banner_Art_1920_814_1.png', alt='four slide')
+                        img.d-block.w-100(src='/images/Banner_Art_1920_814_1.png', alt='four slide')
                     figure.carousel-item
-                        img.d-block.w-100(src='images/Banner_Art_1920_814_2.png', alt='five slide')
+                        img.d-block.w-100(src='/images/Banner_Art_1920_814_2.png', alt='five slide')
                     figure.carousel-item.active
-                        img.d-block.w-100(src='images/Banner_Art_1920_814_3.png', alt='First slide')
+                        img.d-block.w-100(src='/images/Banner_Art_1920_814_3.png', alt='First slide')
                 // .carousel-inner
                 // Controls
                 a.carousel-control-prev(href='#carousel-ptl', role='button', data-slide='prev')
@@ -33,7 +33,10 @@ block content
                         #allmoives.row
                             each video in videos
                                 .col-sm-12.col-md-4.col-lg-2.wellallfoods
+                                    a.text-danger.close(href=`/share-cooking/delete/${video.id}`) x
                                     h3= video.title
                                     a(href= video.url, target='_blank', title='Click to view Movie')
                                         img(src= `${video.image}`, alt= `${video.title}`, style='width:100%;')
                                     div!= video.description
+                .row
+                    a.btn.btn-primary(href="/share-cooking/add-video") Add a Cooking Video

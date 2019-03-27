@@ -26,4 +26,11 @@ router.post('/add-food', (req, res, next) => {
 		res.redirect('/all-foods');
 	});
 });
+
+/* GET request for deleting an user. */
+router.get('/delete/:id', (req, res, next) => {
+	Product.findByIdAndDelete(req.params.id).then(() => {
+		res.redirect('/all-foods');
+	});
+});
 module.exports = router;

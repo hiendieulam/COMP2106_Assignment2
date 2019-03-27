@@ -1,0 +1,19 @@
+extends layout
+block content
+    h1.d-none= title
+    main#main
+        section
+            form(method = "post")
+                div
+                    label(for="title") Video Title
+                    input.form-control(name="title", placeholder="Input the Video Title")
+                div
+                    label(for="image") Image URL
+                    input.form-control(name="image", placeholder="Input the Image URL")
+                div
+                    label(for="description") Description
+                    textarea.form-control(name="description", rows="5", cols="50", placeholder="Input the Video description")
+                div
+                    label(for="targetURL") Video URL
+                    input.form-control(name="targetURL", placeholder="Input the Video URL")
+                button.btn.btn-success(type="submit") Submit
