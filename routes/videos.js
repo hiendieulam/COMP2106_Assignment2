@@ -1,14 +1,15 @@
 var express = require('express');
 var router = express.Router();
-// const Product = require('../models/products');
+const Video = require('../models/videos');
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
-	// Product.find({}).then(products => {
+	Video.find({}).then(videos => {
 		res.render('share-cooking', {
-			title: 'Share Cooking'
+			title: 'Share Cooking',
+			videos: videos
         });
-    // });
+    });
 });
 
 module.exports = router;

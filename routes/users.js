@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
+const User = require('../models/users');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('users', {
-    title: 'Users'
+  User.find({}).then(users => {
+    res.render('users', {
+      title: 'Users',
+      users: users
+    });
   });
 });
 

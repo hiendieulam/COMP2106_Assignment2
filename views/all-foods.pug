@@ -1,5 +1,6 @@
 extends layout
 block content
+  h1.d-none= title
   main#main
     section
       #carousel-ptl.carousel.slide.carousel-fade(data-ride='carousel')
@@ -31,121 +32,25 @@ block content
           .col-12
             h5.allfoods Canadian Foods
             #allfoods.row
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_5.png', style='width:100%;', alt='ADS')
-                p Caprese Salad with Pesto Sauce
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_6.png', style='width:100%;', alt='ADS')
-                p Panzenella is a Tuscan bread salad
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_7.png', style='width:100%;', alt='ADS')
-                p Bruschetta has grilled bread topped...
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_8.png', style='width:100%;', alt='ADS')
-                p Fresh dough is topped with caramelized onions
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_9.png', style='width:100%;', alt='ADS')
-                p Pasta Carbonara
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_10.png', style='width:100%;', alt='ADS')
-                p Margherita Pizza
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_11.png', style='width:100%;', alt='ADS')
-                p Medicinal Functions of Beef
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_12.png', style='width:100%;', alt='ADS')
-                p Beef is More Expensive Than Pork
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_13.png', style='width:100%;', alt='ADS')
-                p Lobster Mac & Cheese
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_14.png', style='width:100%;', alt='ADS')
-                p Xinjiang Large Tray Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_15.png', style='width:100%;', alt='ADS')
-                p Hangzhou Beggar's Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_1.png', style='width:100%;', alt='ADS')
-                p Popular Chinese Pork Dishes
+              each product in products
+                .col-sm-12.col-md-4.col-lg-2.wellallfoods
+                  img(src= product.image, style='width:100%;', alt='ADS')
+                  p= product.productName
         .row
           // Display description of the Jewelry Products
           .col-12
             h5.allfoods1 Italian Foods
             #allfoods1.row
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_5.png', style='width:100%;', alt='ADS')
-                p Caprese Salad with Pesto Sauce
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_6.png', style='width:100%;', alt='ADS')
-                p Panzenella is a Tuscan bread salad
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_7.png', style='width:100%;', alt='ADS')
-                p Bruschetta has grilled bread topped...
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_8.png', style='width:100%;', alt='ADS')
-                p Fresh dough is topped with caramelized onions
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_9.png', style='width:100%;', alt='ADS')
-                p Pasta Carbonara
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_10.png', style='width:100%;', alt='ADS')
-                p Margherita Pizza
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_11.png', style='width:100%;', alt='ADS')
-                p Medicinal Functions of Beef
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_12.png', style='width:100%;', alt='ADS')
-                p Beef is More Expensive Than Pork
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_13.png', style='width:100%;', alt='ADS')
-                p Lobster Mac & Cheese
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_14.png', style='width:100%;', alt='ADS')
-                p Xinjiang Large Tray Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_15.png', style='width:100%;', alt='ADS')
-                p Hangzhou Beggar's Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_1.png', style='width:100%;', alt='ADS')
-                p Popular Chinese Pork Dishes
+              each product in products
+                .col-sm-12.col-md-4.col-lg-2.wellallfoods
+                  img(src= product.image, style='width:100%;', alt='ADS')
+                  p= product.productName
         .row
           // Display description of the Jewelry Products
           .col-12
             h5.allfoods2 Featured Foods
             #allfoods2.row
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_5.png', style='width:100%;', alt='ADS')
-                p Caprese Salad with Pesto Sauce
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_6.png', style='width:100%;', alt='ADS')
-                p Panzenella is a Tuscan bread salad
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_7.png', style='width:100%;', alt='ADS')
-                p Bruschetta has grilled bread topped...
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_8.png', style='width:100%;', alt='ADS')
-                p Fresh dough is topped with caramelized onions
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_9.png', style='width:100%;', alt='ADS')
-                p Pasta Carbonara
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_10.png', style='width:100%;', alt='ADS')
-                p Margherita Pizza
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_11.png', style='width:100%;', alt='ADS')
-                p Medicinal Functions of Beef
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_12.png', style='width:100%;', alt='ADS')
-                p Beef is More Expensive Than Pork
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_13.png', style='width:100%;', alt='ADS')
-                p Lobster Mac & Cheese
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_14.png', style='width:100%;', alt='ADS')
-                p Xinjiang Large Tray Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_15.png', style='width:100%;', alt='ADS')
-                p Hangzhou Beggar's Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                img(src='images/images_499x446_1.png', style='width:100%;', alt='ADS')
-                p Popular Chinese Pork Dishes
+              each product in products
+                .col-sm-12.col-md-4.col-lg-2.wellallfoods
+                  img(src= product.image, style='width:100%;', alt='ADS')
+                  p= product.productName

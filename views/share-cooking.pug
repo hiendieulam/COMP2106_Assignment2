@@ -31,63 +31,9 @@ block content
                     .col-12
                         h5.sharecooking Share Cooking
                         #allmoives.row
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 Cooking dinner for my friend !!
-                                a(href='https://www.youtube.com/watch?v=y55hwbT683E', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274.jpg', style='width:100%;', alt='ADS')
-                                p Spicy foods
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 6 Delicious Foods To Share With Friends 
-                                a(href='https://www.youtube.com/watch?v=li7M7RBJP_M', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_1.jpg', style='width:100%;', alt='ADS')
-                                p Chicken
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 No Bake Oreo Cheesecake
-                                a(href='https://www.youtube.com/watch?v=vl7OBBTv7KY', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_2.jpg', style='width:100%;', alt='ADS')
-                                p Make cake
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 Better than takeout Honey 
-                                a(href='https://www.youtube.com/watch?v=gbKP3hW9EwQ', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_3.jpg', style='width:100%;', alt='ADS')
-                                p Crispy Chicken
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 One Pan Pepper Steak
-                                a(href='https://www.youtube.com/watch?v=nRgaabtAlms', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_4.jpg', style='width:100%;', alt='ADS')
-                                p Pork
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 One Pan Creamy Mushroom Chicken
-                                a(href='https://www.youtube.com/watch?v=mpo0gX1fqaY', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_5.jpg', style='width:100%;', alt='ADS')
-                                p Chicken
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 Creamy Garlic Mushroom Chicken 
-                                a(href='https://www.youtube.com/watch?v=zc2DHGI4Vgs', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_6.jpg', style='width:100%;', alt='ADS')
-                                p Chicken
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 Super Crispy Fried Chicken
-                                a(href='https://www.youtube.com/watch?v=-GAykN5syNY', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_7.jpg', style='width:100%;', alt='ADS')
-                                p Double Crunch & Juicy
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 Chicken Teriyaki | fresh
-                                a(href='https://www.youtube.com/watch?v=f1YmwCud_kk', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_8.jpg', style='width:100%;', alt='ADS')
-                                p Chicken
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 Homemade Veg Stock 
-                                a(href='https://www.youtube.com/watch?v=r3yKMnN0Brs', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_9.jpg', style='width:100%;', alt='ADS')
-                                p Vegetable Stock Recipe
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 CAN YOU COOK BUBBLE GUM?!
-                                a(href='https://www.youtube.com/watch?v=Ps8bxbCdJhA', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274_10.jpg', style='width:100%;', alt='ADS')
-                                p Bubble Gum
-                            .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                h3 Cooking dinner for you !!!
-                                a(href='https://www.youtube.com/watch?v=y55hwbT683E', target='_blank', title='Click to view Movie')
-                                    img(src='images/images_movie_492x274.jpg', style='width:100%;', alt='ADS')
-                                p Hot foods
+                            each video in videos
+                                .col-sm-12.col-md-4.col-lg-2.wellallfoods
+                                    h3= video.title
+                                    a(href= video.url, target='_blank', title='Click to view Movie')
+                                        img(src= `${video.image}`, alt= `${video.title}`, style='width:100%;')
+                                    div!= video.description
