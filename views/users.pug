@@ -22,7 +22,6 @@ block content
                                             th Phone
                                             th Edit
                                             th Delete
-                                            th Details
                                         each user, index in users
                                             tr(style='border-bottom: 1px solid #ccc;')
                                                 td= index+1
@@ -30,8 +29,9 @@ block content
                                                 td= user.email
                                                 td #{user.address}, #{user.city}, #{user.country} #{user.postal}
                                                 td= user.phone
-                                                td Edit
-                                                td Delete
                                                 td
-                                                    a(href='#') Details
+                                                    a(href=`/users/edit-user/${user.id}`) Edit
+                                                td
+                                                    a(href=`/users/delete/${user.id}`) Delete
+                    a.btn.btn-primary(href="/users/add-user") Add User
                 .waste

@@ -1,0 +1,73 @@
+extends layout
+block content
+    main#main
+        section#content1(role='region')
+            .col-12.col-sm-12.col-md-12.col-lg-12
+                p(style='clear:both;')
+                .containertabs
+                    // Create Navigation Tabs to describle the functions of the product
+                    .tabs
+                        ul.tabNavigation
+                            li
+                                a(href='#first') Create New
+                        #first
+                            .row
+                                form(method = "post")
+                                    fieldset
+                                        .col-12
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label UserName
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#username(type='text', name='name', style='width: 100%;')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter Username
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label Email
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#email_add(type='email', name='email', style='width: 100%;')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter Email
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label password
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input(type='password', name='password' style='width: 100%;')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter Password
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label RePassword
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#repassword(type='password', style='width: 100%;')
+                                                .col-12.col-sm-12.col-md-4.col-lg-4
+                                                    label(style='float: left;') * Please enter Repassword
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label Address
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#address(type='text', name='address', style='width: 100%;')
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label Postal-Code
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#postal(type='text', name='postal', style='width: 100%;')
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label City
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#city(type='text', name='city', style='width: 100%;')
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label Country
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#country(type='text', name='country', style='width: 100%;')
+                                            .row
+                                                .col-12.col-sm-12.col-md-2.col-lg-2
+                                                    label Phone
+                                                .col-12.col-sm-12.col-md-6.col-lg-6
+                                                    input#phone(type='text', name='phone', style='width: 100%;')
+                                        button.create_new(role='button', type='submit') Create
+                                        button.cancel(role='button', type='reset') Reset
+                .waste

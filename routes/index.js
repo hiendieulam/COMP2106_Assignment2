@@ -5,12 +5,12 @@ const Carousel = require('../models/carousels');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Carousel.find({}).then(carousles => {
-    carousles = carousles;
+  // Carousel.find({}).then(carousles => {
+  //   carousles = carousles;
 
+  // // console.log(carousles);
+  // });
   // console.log(carousles);
-  });
-  console.log(carousles);
   res.render('index', {
     title: 'Home'
   });
@@ -27,6 +27,14 @@ router.get('/about-us', function(req, res, next) {
 router.get('/register-login', function(req, res, next) {
   res.render('register-login', {
     title: 'User'
+  });
+});
+
+/* POST request for the add an user. */
+router.post('/register-login', (req, res, next) => {
+  const addUser = new User(req.body);
+  addUser.save().then(() => {
+    res.redirect('/register-login');
   });
 });
 

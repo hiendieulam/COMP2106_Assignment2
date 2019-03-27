@@ -1,0 +1,30 @@
+extends layout
+block content
+    h1.d-none= title
+    main#main
+        section
+            form(method = "post")
+                div
+                    label(for="productName") Product Name
+                    input.form-control(name="productName", placeholder="Input the Food Name")
+                div
+                    label(for="price") Price
+                    input.form-control(name="price", placeholder="Input the Food Price")
+                div
+                    label(for="image") Image URL
+                    input.form-control(name="image", placeholder="Input the Food Image")
+                div
+                    label(for="rate") Rate
+                    input.form-control(name="rate", placeholder="Input the Food Rate")
+                div
+                    label(for="foodSize") Food Size
+                    select(name="foodSize")
+                        option(value='X-Small') X-Small
+                        option(value='Small') Small
+                        option(value='Medium') Medium
+                        option(value='Large') Large
+                        option(value='X-Large') X-Large
+                div
+                    label(for="description") Description
+                    input.form-control(name="description", placeholder="Input the Food Description")
+                button.btn.btn-success(type="submit") Submit

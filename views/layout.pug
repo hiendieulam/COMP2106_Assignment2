@@ -2,9 +2,9 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='stylesheets/normalize.css')
-    link(rel='stylesheet', href='stylesheets/styles.css')
-    link(rel='stylesheet', href='stylesheets/tabs.css')
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+    link(rel='stylesheet', href='/stylesheets/tabs.css')
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS', crossorigin='anonymous')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   body
@@ -15,15 +15,15 @@ html
           // Create images, text input, button to associate with user
           .ContactTop
               a.listcontact(href='#', target='_blank', title='Click to view Contact')
-                  img(src='./images/contact_icon_30x21.png', alt='Contact')
+                  img(src='/images/contact_icon_30x21.png', alt='Contact')
                   | Contact Us
           .Info
               a.listinfo(href='mailto:info@sun.ca', target='_blank', title='Click to view Info')
-                  img(src='./images/letter_icon.png', alt='Info')
+                  img(src='/images/letter_icon.png', alt='Info')
                   | info@sun.ca
           .Tell
               a.listtell(href='tel:(512) 895-8569', target='_blank', title='Click to view Contact')
-                  img(src='./images/Tell_icon.png', alt='Tell')
+                  img(src='/images/Tell_icon.png', alt='Tell')
                   | (512) 895-8569
           .register
               a.register(href='register-login#first', title='Click to Register') Register
@@ -36,7 +36,7 @@ html
       // Create logo for company
       h1
           a#logo(href='/')
-              img(src='images/logo_O_204x84.png', alt='Logo')
+              img(src='/images/logo_O_204x84.png', alt='Logo')
       // Create a navigation to introduce the company to customers
       nav#floatingbar(role='navigation')
           // Function as a hamburger menu icon (http://copypastecharacter.com/graphic-shapes)
@@ -111,6 +111,6 @@ html
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut', crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k', crossorigin='anonymous')
-    script(src='javascripts/gallery.js', type='text/javascript')
-    script(src='javascripts/tabs.js', type='text/javascript')
-    script(src='javascripts/jquery-1.9.1.min.js', type='text/javascript')
+    script(src='/javascripts/gallery.js', type='text/javascript')
+    script(src='/javascripts/tabs.js', type='text/javascript')
+    script(src='/javascripts/jquery-1.9.1.min.js', type='text/javascript')
