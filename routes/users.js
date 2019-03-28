@@ -22,12 +22,6 @@ router.get('/add-user', function(req, res, next) {
 });
 
 /* POST request for the add an user. */
-// router.post('/add-user', (req, res, next) => {
-//   const addUser = new User(req.body);
-//   addUser.save().then(() => {
-//     res.redirect('/users');
-//   });
-// });
 router.post('/add-user', function(req, res) {
   User.register(
     new User({username: req.body.username, email: req.body.email, address: req.body.address, postal: req.body.postal, city: req.body.city, country: req.body.country, phone: req.body.phone }),

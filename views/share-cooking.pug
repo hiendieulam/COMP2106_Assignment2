@@ -33,10 +33,12 @@ block content
                         #allmoives.row
                             each video in videos
                                 .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                                    a.text-danger.close(href=`/share-cooking/delete/${video.id}`) x
+                                    if loggedIn
+                                        a.text-danger.close(href=`/share-cooking/delete/${video.id}`) x
                                     h3= video.title
                                     a(href= video.url, target='_blank', title='Click to view Movie')
                                         img(src= `${video.image}`, alt= `${video.title}`, style='width:100%;')
                                     div!= video.description
-                .row
-                    a.btn.btn-primary(href="/share-cooking/add-video") Add a Cooking Video
+                if loggedIn
+                    .row
+                        a.btn.btn-primary(href="/share-cooking/add-video") Add a Cooking Video

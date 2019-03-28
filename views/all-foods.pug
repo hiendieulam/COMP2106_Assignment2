@@ -34,10 +34,12 @@ block content
             #allfoods.row
               each product in products
                 .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                  a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
+                  if loggedIn
+                    a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
                   img(src= product.image, style='width:100%;', alt='ADS')
                   p= product.productName
-            a.btn.btn-primary(href="/all-foods/add-food") Add a food
+            if loggedIn
+              a.btn.btn-primary(href="/all-foods/add-food") Add a food
         .row
           // Display description of the Jewelry Products
           .col-12
@@ -45,10 +47,12 @@ block content
             #allfoods1.row
               each product in products
                 .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                  a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
+                  if loggedIn
+                    a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
                   img(src= product.image, style='width:100%;', alt='ADS')
                   p= product.productName
-            a.btn.btn-primary(href="/all-foods/add-food") Add a food
+            if loggedIn
+              a.btn.btn-primary(href="/all-foods/add-food") Add a food
         .row
           // Display description of the Jewelry Products
           .col-12
@@ -56,7 +60,9 @@ block content
             #allfoods2.row
               each product in products
                 .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                  a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
+                  if loggedIn
+                    a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
                   img(src= product.image, style='width:100%;', alt='ADS')
                   p= product.productName
-            a.btn.btn-primary(href="/all-foods/add-food") Add a food
+            if loggedIn
+              a.btn.btn-primary(href="/all-foods/add-food") Add a food
