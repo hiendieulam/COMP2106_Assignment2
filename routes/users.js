@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const User = require('../models/users');
+var passport = require('passport');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -21,11 +22,26 @@ router.get('/add-user', function(req, res, next) {
 });
 
 /* POST request for the add an user. */
-router.post('/add-user', (req, res, next) => {
-  const addUser = new User(req.body);
-  addUser.save().then(() => {
-    res.redirect('/users');
-  });
+// router.post('/add-user', (req, res, next) => {
+//   const addUser = new User(req.body);
+//   addUser.save().then(() => {
+//     res.redirect('/users');
+//   });
+// });
+router.post('/add-user', function(req, res) {
+  User.register(
+    new User({username: req.body.username, email: req.body.email, address: req.body.address, postal: req.body.postal, city: req.body.city, country: req.body.country, phone: req.body.phone }),
+    req.body.password,
+    function(err, user) {
+      if (err) {
+        console.log(err);
+        return res.render('register', { user: user, error: err.message });
+      }
+      passport.authenticate('local')(req, res, function() {
+        res.redirect('/users');
+      });
+    }
+  );
 });
 
 /* GET request for an user. */
