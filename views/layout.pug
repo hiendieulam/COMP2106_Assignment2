@@ -6,7 +6,7 @@ html
     link(rel='stylesheet', href='/stylesheets/styles.css')
     link(rel='stylesheet', href='/stylesheets/tabs.css')
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS', crossorigin='anonymous')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css')
   body
     // ARIA Landmark Roles throughout
     header(role='banner')
@@ -14,21 +14,24 @@ html
       .Topbar
           // Create images, text input, button to associate with user
           .ContactTop
-              a.listcontact(href='#', target='_blank', title='Click to view Contact')
-                  img(src='/images/contact_icon_30x21.png', alt='Contact')
-                  | Contact Us
+            a.listcontact(href='#', target='_blank', title='Click to view Contact')
+                img(src='/images/contact_icon_30x21.png', alt='Contact')
+                | Contact Us
           .Info
-              a.listinfo(href='mailto:info@sun.ca', target='_blank', title='Click to view Info')
-                  img(src='/images/letter_icon.png', alt='Info')
-                  | info@sun.ca
+            a.listinfo(href='mailto:info@sun.ca', target='_blank', title='Click to view Info')
+                img(src='/images/letter_icon.png', alt='Info')
+                | info@sun.ca
           .Tell
-              a.listtell(href='tel:(512) 895-8569', target='_blank', title='Click to view Contact')
-                  img(src='/images/Tell_icon.png', alt='Tell')
-                  | (512) 895-8569
+            a.listtell(href='tel:(512) 895-8569', target='_blank', title='Click to view Contact')
+                img(src='/images/Tell_icon.png', alt='Tell')
+                | (512) 895-8569
           .register
-              a.register(href='register-login#first', title='Click to Register') Register
+            a.register(href='/register', title='Click to Register') Register
           .login
-              a.login(href='register-login#second', title='Click to Login') Log in
+            if loggedIn
+              a.login(href='/logout', title='Click to Logout') Logout
+            else
+              a.login(href='/login', title='Click to Login') Login
           .Search
               form(action='#')
                   input.sitesearch(type='text', name='sitesearch', value='Search for...')
@@ -112,5 +115,4 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut', crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k', crossorigin='anonymous')
     script(src='/javascripts/gallery.js', type='text/javascript')
-    script(src='/javascripts/tabs.js', type='text/javascript')
     script(src='/javascripts/jquery-1.9.1.min.js', type='text/javascript')

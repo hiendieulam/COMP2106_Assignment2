@@ -16,7 +16,7 @@ block content
                                     tbody
                                         tr(style='border-bottom: 1px solid #ccc;')
                                             th Order
-                                            th Name
+                                            th Username
                                             th Email
                                             th Address
                                             th Phone
@@ -25,7 +25,7 @@ block content
                                         each user, index in users
                                             tr(style='border-bottom: 1px solid #ccc;')
                                                 td= index+1
-                                                td= user.name
+                                                td= user.username
                                                 td= user.email
                                                 td #{user.address}, #{user.city}, #{user.country} #{user.postal}
                                                 td= user.phone
