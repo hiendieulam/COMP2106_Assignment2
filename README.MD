@@ -76,5 +76,7 @@
 
   - Show some information for user to register into Website as a member of the store.
 
-- My Link: https://hienlam-comp2106-assignment2.herokuapp.com/
+## Links
+
+- My Website Link: https://hienlam-comp2106-assignment2.herokuapp.com/
 - My Link on Github: https://github.com/hiendieulam/COMP2106_Assignment2

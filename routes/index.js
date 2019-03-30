@@ -75,3 +75,7 @@ router.get('/logout', function(req, res) {
   // req.logout();
 });
 module.exports = router;
+
+router.get('/google-callback'), function(req, res) {
+  res.send('Google Callback');
+}
