@@ -2,67 +2,91 @@ extends layout
 block content
   h1.d-none= title
   main#main
-    section
-      #carousel-ptl.carousel.slide.carousel-fade(data-ride='carousel')
-        // Create carousel-inner
-        .carousel-inner
-          figure.carousel-item
-            img.d-block.w-100(src='images/Banner_Art_1920_814.png', alt='Third slide')
-          figure.carousel-item
-            img.d-block.w-100(src='images/Banner_Art_1920_814_1.png', alt='four slide')
-          figure.carousel-item
-            img.d-block.w-100(src='images/Banner_Art_1920_814_2.png', alt='five slide')
-          figure.carousel-item.active
-            img.d-block.w-100(src='images/Banner_Art_1920_814_3.png', alt='First slide')
-        // .carousel-inner
-        // Controls
-        a.carousel-control-prev(href='#carousel-ptl', role='button', data-slide='prev')
-          // <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          span.fas.fa-arrow-circle-left.fa-lg(aria-hidden='true')
-          span.sr-only Previous
-        a.carousel-control-next(href='#carousel-ptl', role='button', data-slide='next')
-          // <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          span.fas.fa-arrow-circle-right.fa-lg(aria-hidden='true')
-          span.sr-only Next
-      // #carousel
-      // Close list Grid
-      section#content1(role='region')
-        .row
-          // Display description of the Jewelry Products
-          .col-12
-            h5.allfoods Canadian Foods
-            #allfoods.row
-              each product in products
-                .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                  if loggedIn
-                    a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
-                  img(src= product.image, style='width:100%;', alt='ADS')
-                  p= product.productName
-            if loggedIn
-              a.btn.btn-primary(href="/all-foods/add-food") Add a food
-        .row
-          // Display description of the Jewelry Products
-          .col-12
-            h5.allfoods1 Italian Foods
-            #allfoods1.row
-              each product in products
-                .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                  if loggedIn
-                    a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
-                  img(src= product.image, style='width:100%;', alt='ADS')
-                  p= product.productName
-            if loggedIn
-              a.btn.btn-primary(href="/all-foods/add-food") Add a food
-        .row
-          // Display description of the Jewelry Products
-          .col-12
-            h5.allfoods2 Featured Foods
-            #allfoods2.row
-              each product in products
-                .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                  if loggedIn
-                    a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
-                  img(src= product.image, style='width:100%;', alt='ADS')
-                  p= product.productName
-            if loggedIn
-              a.btn.btn-primary(href="/all-foods/add-food") Add a food
+    section#content1(role='region')
+      .row
+        // Display description of the Jewelry Products
+        .col-12
+          h5.allfoods Canadian Foods
+          #allfoods.row
+            each product in products
+              .col-sm-12.col-md-3.col-lg-3.well2
+                // Create detailed price information food and share information
+                if loggedIn
+                  a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
+                h2.productName= product.productName
+                h2.linkshare
+                  | Price: #{product.price} | SHARE
+                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                    img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
+                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                    img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
+                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                    img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
+                img(src=`${product.image}`, style='width:100%;', alt='ADS')
+                div.description!= product.description
+                // Create vote quality, shipping cost about food
+                h5 RATE: #{product.rate}
+                // Choose size for food
+                h5 Foods Size: #{product.foodSize}
+                // Choose buy food
+                button.addtocart(type='submit') Add To Cart
+          if loggedIn
+            a.btn.btn-primary(href="/all-foods/add-food") Add a food
+      .row
+        // Display description of the Jewelry Products
+        .col-12
+          h5.allfoods1 Italian Foods
+          #allfoods1.row
+            each product in products
+              .col-sm-12.col-md-3.col-lg-3.well2
+                // Create detailed price information food and share information
+                if loggedIn
+                  a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
+                h2.productName= product.productName
+                h2.linkshare
+                  | Price: #{product.price} | SHARE
+                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                    img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
+                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                    img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
+                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                    img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
+                img(src=`${product.image}`, style='width:100%;', alt='ADS')
+                div.description!= product.description
+                // Create vote quality, shipping cost about food
+                h5 RATE: #{product.rate}
+                // Choose size for food
+                h5 Foods Size: #{product.foodSize}
+                // Choose buy food
+                button.addtocart(type='submit') Add To Cart
+          if loggedIn
+            a.btn.btn-primary(href="/all-foods/add-food") Add a food
+      .row
+        // Display description of the Jewelry Products
+        .col-12
+          h5.allfoods2 Featured Foods
+          #allfoods2.row
+            each product in products
+              .col-sm-12.col-md-3.col-lg-3.well2
+                // Create detailed price information food and share information
+                if loggedIn
+                  a.text-danger.close(href=`/all-foods/delete/${product.id}`) x
+                h2.productName= product.productName
+                h2.linkshare
+                  | Price: #{product.price} | SHARE
+                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                    img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
+                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                    img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
+                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                    img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
+                img(src=`${product.image}`, style='width:100%;', alt='ADS')
+                div.description!= product.description
+                // Create vote quality, shipping cost about food
+                h5 RATE: #{product.rate}
+                // Choose size for food
+                h5 Foods Size: #{product.foodSize}
+                // Choose buy food
+                button.addtocart(type='submit') Add To Cart
+          if loggedIn
+            a.btn.btn-primary(href="/all-foods/add-food") Add a food

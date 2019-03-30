@@ -7,6 +7,7 @@ var slides = document.getElementsByClassName("carousel-item");
 // var dots = document.getElementsByClassName("demo");
 var captionText = document.getElementById("caption");
 
+slides[0].classList.add('active');
 showSlides(slideIndex);
 
 /* Next/previous controls

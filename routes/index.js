@@ -1,20 +1,22 @@
 var express = require('express');
 var router = express.Router();
+const Home = require('../models/homes');
 const Carousel = require('../models/carousels');
+const Product = require('../models/products');
 const User = require('../models/users');
 var passport = require('passport');
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  // Carousel.find({}).then(carousles => {
-  //   carousles = carousles;
-
-  // // console.log(carousles);
-  // });
-  // console.log(carousles);
-  res.render('index', {
-    title: 'Home'
+router.get('/', async function(req, res, next) {
+  await Home.findOne({_id: '5c9fcc858f5a354fdf4a63ab'}).populate('carousel').populate('bestSellers').
+  exec(function (err, home) {
+    if (err) return handleError(err);
+    console.log(home.carousel);
+    res.render('index', {
+      title: 'Home',
+      home
+    });
   });
 });
 

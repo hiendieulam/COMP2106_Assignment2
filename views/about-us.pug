@@ -2,61 +2,37 @@ extends layout
 block content
     main#main
         section
-            #carousel-ptl.carousel.slide.carousel-fade(data-ride='carousel')
-                // Create carousel-inner
-                .carousel-inner
-                    figure.carousel-item
-                        img.d-block.w-100(src='images/Banner_Art_1920_814.png', alt='Third slide')
-                    figure.carousel-item
-                        img.d-block.w-100(src='images/Banner_Art_1920_814_1.png', alt='four slide')
-                    figure.carousel-item
-                        img.d-block.w-100(src='images/Banner_Art_1920_814_2.png', alt='five slide')
-                    figure.carousel-item.active
-                        img.d-block.w-100(src='images/Banner_Art_1920_814_3.png', alt='First slide')
-                // .carousel-inner
-                // Controls
-                a.carousel-control-prev(href='#carousel-ptl', role='button', data-slide='prev')
-                    // <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    span.fas.fa-arrow-circle-left.fa-lg(aria-hidden='true')
-                    span.sr-only Previous
-                a.carousel-control-next(href='#carousel-ptl', role='button', data-slide='next')
-                    // <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    span.fas.fa-arrow-circle-right.fa-lg(aria-hidden='true')
-                    span.sr-only Next
-            // #carousel
-            // Close list Grid
-            section
-                .content
-                    h1 OUR COMPANY
-                    #employee_volunteer.row
-                        .col-12.col-sm-12.col-md-8.col-lg-8
-                            h2 ABOUT US
-                            h3
-                                | We are commited to think idea that no one in our region should ever have to struggle with hunger, with this in mind
-                                br
-                        .col-12.col-sm-12.col-md-4.col-lg-4
-                            div
-                                img(src='images/images_655x621_3.png', style='width:50%', alt='ADS')
-            section
-                .content2
-                    #helping_hands.row
-                        .col-12.col-sm-12.col-md-4.col-lg-4
-                            div
-                                img(src='images/images_655x621_2.png', style='width:50%', alt='ADS')
-                        .col-12.col-sm-12.col-md-8.col-lg-8
-                            h2 OUR MOTIVE
-                            h3
-                                | We dedicate to helping Canadians living with food and funds to share with our network
-                                br
-                            h3
-                                | delivering programs and services to food to support our work and develop self-sufficiency in canadians living with hunger
-            section#content3(role='region')
-                .row
-                    // <div class="col-12"><h5 class="lastnews">The Lastest News</h5>
-                    #lastnews.row
-                        .col-sm-12.col-md-6.col-lg-6.welllastnews
-                            figure
-                                img(src='images/Banner_Art_1920_814_1.png', style='width:100%', alt='ADS')
-                        .col-sm-12.col-md-6.col-lg-6.welllastnews
-                            figure
-                                img(src='images/Banner_Art_1920_814_2.png', style='width:100%', alt='ADS')
+            .content
+                h1 OUR COMPANY
+                #employee_volunteer.row
+                    .col-12.col-sm-12.col-md-8.col-lg-8
+                        h2 ABOUT US
+                        p
+                            | We are commited to think idea that no one in our region should ever have to struggle with hunger, with this in mind
+                            br
+                    .col-12.col-sm-12.col-md-4.col-lg-4
+                        div
+                            img(src='images/images_655x621_3.png', style='width:50%', alt='ADS')
+        section
+            .content2
+                #helping_hands.row
+                    .col-12.col-sm-12.col-md-4.col-lg-4
+                        div
+                            img(src='images/images_655x621_2.png', style='width:50%', alt='ADS')
+                    .col-12.col-sm-12.col-md-8.col-lg-8
+                        h2 OUR MOTIVE
+                        p
+                            | We dedicate to helping Canadians living with food and funds to share with our network
+                            br
+                        p
+                            | delivering programs and services to food to support our work and develop self-sufficiency in canadians living with hunger
+        section#content3(role='region')
+            .row
+                // <div class="col-12"><h5 class="lastnews">The Lastest News</h5>
+                #lastnews.row
+                    .col-sm-12.col-md-6.col-lg-6.welllastnews
+                        figure
+                            img(src='images/Banner_Art_1920_814_1.png', style='width:100%', alt='ADS')
+                    .col-sm-12.col-md-6.col-lg-6.welllastnews
+                        figure
+                            img(src='images/Banner_Art_1920_814_2.png', style='width:100%', alt='ADS')

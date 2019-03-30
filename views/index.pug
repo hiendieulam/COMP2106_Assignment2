@@ -6,14 +6,9 @@ block content
       #carousel-ptl.carousel.slide.carousel-fade(data-ride='carousel')
         // Create carousel-inner
         .carousel-inner
-          figure.carousel-item
-            img.d-block.w-100(src='/images/Banner_Art_1920_814.png', alt='Third slide')
-          figure.carousel-item
-            img.d-block.w-100(src='/images/Banner_Art_1920_814_1.png', alt='four slide')
-          figure.carousel-item
-            img.d-block.w-100(src='/images/Banner_Art_1920_814_2.png', alt='five slide')
-          figure.carousel-item.active
-            img.d-block.w-100(src='/images/Banner_Art_1920_814_3.png', alt='First slide')
+          each item in home.carousel
+            figure.carousel-item
+              img.d-block.w-100(src=`${item.image}`, alt=`${item.title}`)
         // .carousel-inner
         // Controls
         a.carousel-control-prev(href='#carousel-ptl', role='button', data-slide='prev')
@@ -32,104 +27,31 @@ block content
           .col-12
             h5.bestselling The Best Selling Foods
             #bestselling.row
-              #bestselling1.col-sm-12.col-md-3.col-lg-3.well2
-                // Create detailed price information food and share information
-                h2 PORK - CORIANDER 
-                h2.linkshare
-                  | Price: $2,89 | SHARE
-                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
-                    img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
-                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
-                    img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
-                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
-                    img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
-                // Semantic Date / Time
-                time(datetime='2018-12-08T00:00Z')
-                  | Date: November 1
-                  sup st
-                img(src='/images/images_499x446_1.png', style='width:100%;', alt='ADS')
-                p Crispy stuffed wontons with sweet Thai chili. It is really great!!
-                // Create vote quality, shipping cost about food
-                h3 RATE:
-                // Choose size for food
-                h3 Foods Size
-                // Choose buy food
-                button.addtocart(type='submit') Add To Cart
-              // End class col-sm-3 well
-              #bestselling2.col-sm-12.col-md-3.col-lg-3.well2
-                // Create detailed price information food and share information
-                h2 BIG RIG BREAKFAST
-                h2.linkshare
-                  | Price: $5,89 | SHARE
-                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
-                    img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
-                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
-                    img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
-                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
-                    img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
-                // Semantic Date / Time
-                time(datetime='2018-12-08T00:00Z')
-                  | Date: May 8
-                  sup th
-                img(src='/images/images_499x446_2.png', style='width:100%;', alt='ADS')
-                p 3 farm fresh eggs, 2 sausages, 3 slices of bacon, homefries toast and a...
-                // Create vote quality, shipping cost about food
-                h3 RATE:
-                // Choose size for food
-                h3 Foods Size
-                // Choose buy food
-                button.addtocart(type='submit') Add To Cart
-              // End class col-sm-3 well
-              #bestselling3.col-sm-12.col-md-3.col-lg-3.well2
-                // Create detailed price information food and share information
-                h2 OTTAWA’S
-                h2.linkshare
-                  | Price: $8,89 | SHARE
-                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
-                    img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
-                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
-                    img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
-                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
-                    img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
-                // Semantic Date / Time
-                time(datetime='2018-12-08T00:00Z')
-                  | Date: Jun 21
-                  sup st
-                img(src='/images/images_499x446_3.png', style='width:100%;', alt='ADS')
-                p 2 eggs any style with choice of bacon, ham or sausage. Served with homefries...
-                // Create vote quality, shipping cost about food
-                h3 RATE:
-                // Choose size for food
-                h3 Foods Size
-                // Choose buy food
-                button.addtocart(role='button', type='submit') Add To Cart
-              // End class col-sm-3 well
-              #bestselling4.col-sm-12.col-md-3.col-lg-3.well2
-                // Create detailed price information food and share information
-                h2 FRENCH TOAST HOT
-                h2.linkshare
-                  | Price: $7,89 | SHARE
-                  a(href='https://twitter.com', target='_blank', title='Click to view twitter')
-                    img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
-                  a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
-                    img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
-                  a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
-                    img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
-                // Semantic Date / Time
-                time(datetime='2018-12-08T00:00Z')
-                  | Date: Jully 19
-                  sup th
-                img(src='/images/images_499x446_4.png', style='width:100%;', alt='ADS')
-                p Hand dipped and finished with a hint of cinnamon and dusted with powdered sugar.
-                // Create vote quality, shipping cost about food
-                h3 RATE:
-                // Choose size for food
-                h3 Foods Size
-                // Choose buy food
-                button.addtocart(type='submit') Add To Cart
-              // End class col-sm-3 well
-              a#see-all(href='all-foods', title='') See All » 
+              each product in home.bestSellers
+                .col-sm-12.col-md-3.col-lg-3.well2
+                  // Create detailed price information food and share information
+                  h2.productName= product.productName
+                  h2.linkshare
+                    | Price: #{product.price} | SHARE
+                    a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                      img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
+                    a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                      img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
+                    a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                      img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
+                  img(src=`${product.image}`, style='width:100%;', alt='ADS')
+                  div.description!= product.description
+                  // Create vote quality, shipping cost about food
+                  h5 RATE: #{product.rate}
+                  // Choose size for food
+                  h5 Foods Size: #{product.foodSize}
+                  // Choose buy food
+                  button.addtocart(type='submit') Add To Cart
+                // End class col-sm-3 well
+              a#see-all(href='all-foods', title='') See All »
       section#content2(role='region')
+
+        h5.bestselling The Latest News
         .row
           // <div class="col-12"><h5 class="lastnews">The Lastest News</h5>
           #lastnews.row
@@ -146,58 +68,3 @@ block content
                 img(src='/images/Banner_Art_1920_814_2.png', style='width:100%;', alt='ADS')
               p
                 | Nothing like a fresh tomato salad in summers! A great antipasto bite to start your meal with. This combination of juicy tomatoes and mozzarella cheese salad topped with freshly made pesto sauce is a distinct yet simple one...
-      section#content3(role='region')
-        .row
-          // Display description of the Jewelry Products
-          .col-12
-            h5.allfoods All Foods
-            #allfoods.row
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_5.png', style='width:100%;', alt='ADS')
-                p Caprese Salad with Pesto Sauce
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_6.png', style='width:100%;', alt='ADS')
-                p Panzenella is a Tuscan bread salad
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_7.png', style='width:100%;', alt='ADS')
-                p Bruschetta has grilled bread topped...
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_8.png', style='width:100%;', alt='ADS')
-                p Fresh dough is topped with caramelized onions
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_9.png', style='width:100%;', alt='ADS')
-                p Pasta Carbonara
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_10.png', style='width:100%;', alt='ADS')
-                p Margherita Pizza
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_11.png', style='width:100%;', alt='ADS')
-                p Medicinal Functions of Beef
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_12.png', style='width:100%;', alt='ADS')
-                p Beef is More Expensive Than Pork
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_13.png', style='width:100%;', alt='ADS')
-                p Lobster Mac & Cheese
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_14.png', style='width:100%;', alt='ADS')
-                p Xinjiang Large Tray Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_15.png', style='width:100%;', alt='ADS')
-                p Hangzhou Beggar's Chicken
-              .col-sm-12.col-md-4.col-lg-2.wellallfoods
-                a(href='food-details')
-                  img(src='/images/images_499x446_12.png', style='width:100%;', alt='ADS')
-                p Popular Chinese Pork Dishes
-              a#see-all1(href='all-foods', title='') See All » 
