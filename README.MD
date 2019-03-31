@@ -32,7 +32,11 @@
 
   - Best selling foods.
 
-    - Voter's favorites, prices and food's size.
+    - Voter's favorites
+
+    - Prices 
+
+    - Food's size
 
   - New food informations.
 
@@ -58,7 +62,13 @@
 
 7. Add Video
 
-  - Add new video and some information about video, for example: title, discription, url,.. about product.
+  - Add new video and some information about video
+
+    - Title
+
+    - Discription
+    
+    - Url,.. about product.
 
 8. Users
 
