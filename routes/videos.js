@@ -14,14 +14,14 @@ router.get('/', (req, res, next) => {
 
 
 /* GET request for the add a food. */
-router.get('/add-video', (req, res, next) => {
+router.get('/add', (req, res, next) => {
 	res.render('add-Video', {
 		title: 'Add a Video'
 });
 });
 
 /* POST request for the add a food. */
-router.post('/add-video', (req, res, next) => {
+router.post('/add', (req, res, next) => {
 	const addVideo = new Video(req.body);
 	addVideo.save().then(() => {
 		res.redirect('/share-cooking');

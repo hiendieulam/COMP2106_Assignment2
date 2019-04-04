@@ -15,14 +15,14 @@ router.get('/', function(req, res, next) {
 
 
 /* GET add user page. */
-router.get('/add-user', function(req, res, next) {
+router.get('/add', function(req, res, next) {
   res.render('add-user', {
     title: 'Add User'
   });
 });
 
 /* POST request for the add an user. */
-router.post('/add-user', function(req, res) {
+router.post('/add', function(req, res) {
   User.register(
     new User({username: req.body.username, email: req.body.email, address: req.body.address, postal: req.body.postal, city: req.body.city, country: req.body.country, phone: req.body.phone }),
     req.body.password,
@@ -39,7 +39,7 @@ router.post('/add-user', function(req, res) {
 });
 
 /* GET request for an user. */
-router.get('/edit-user/:id', (req, res, next) => {
+router.get('/edit/:id', (req, res, next) => {
   User.findById(req.params.id).then(requestUser => {
     res.render('edit-user', {
       title: 'Edit User',
@@ -49,7 +49,7 @@ router.get('/edit-user/:id', (req, res, next) => {
 });
 
 /* POST request for the update the user. */
-router.post('/edit-user/:id', (req, res, next) => {
+router.post('/edit/:id', (req, res, next) => {
   User.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
     res.redirect('/users');
   });

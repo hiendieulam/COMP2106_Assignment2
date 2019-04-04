@@ -84,7 +84,7 @@ passport.use(new GoogleStrategy({
     //   return done(err, user);
     // });
     User.findOne({ username: profile.id }, function (err, user) {
-      console.log('Profile cua m ne: ' + profile.id);
+      // console.log('Profile cua m ne: ' + profile.id);
       // console.log(auth2.currentUser.get().getId());
       if (!err && !user) {
         const newgoogle = new User({username: profile.id});
@@ -126,7 +126,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/all-foods', productsRouter);
+app.use('/products', productsRouter);
 app.use('/share-cooking', videosRouter);
 
 // catch 404 and forward to error handler

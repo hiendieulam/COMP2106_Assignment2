@@ -13,14 +13,14 @@ router.get('/', (req, res, next) => {
 });
 
 /* GET request for the add a food. */
-router.get('/add-food', (req, res, next) => {
+router.get('/add', (req, res, next) => {
 		res.render('add-food', {
 			title: 'Add a food'
     });
 });
 
 /* POST request for the add a food. */
-router.post('/add-food', (req, res, next) => {
+router.post('/add', (req, res, next) => {
 	const addFood = new Product(req.body);
 	addFood.save().then(() => {
 		res.redirect('/all-foods');
@@ -30,7 +30,7 @@ router.post('/add-food', (req, res, next) => {
 /* GET request for deleting an user. */
 router.get('/delete/:id', (req, res, next) => {
 	Product.findByIdAndDelete(req.params.id).then(() => {
-		res.redirect('/all-foods');
+		res.redirect('/products');
 	});
 });
 module.exports = router;
