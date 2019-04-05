@@ -12,7 +12,7 @@ router.get('/', async function(req, res, next) {
   await Home.findOne({_id: '5c9fcc858f5a354fdf4a63ab'}).populate('carousel').populate('bestSellers').
   exec(function (err, home) {
     if (err) return handleError(err);
-    console.log(home.carousel);
+    console.log(home);
     res.render('index', {
       title: 'Home',
       home
