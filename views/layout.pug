@@ -1,0 +1,119 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+    link(rel='stylesheet', href='/stylesheets/tabs.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css')
+    meta(name='google-site-verification', content='XJKaNw2IQ-d8jG763HtA0Xzlsshu7vx7-5gpHyL2D2Q')
+  body
+    // ARIA Landmark Roles throughout
+    header(role='banner')
+      // Role Banner
+      .Topbar
+          // Create images, text input, button to associate with user
+          .ContactTop
+            a.listcontact(href='#', target='_blank', title='Click to view Contact')
+                img(src='/images/contact_icon_30x21.png', alt='Contact')
+                | Contact Us
+          .Info
+            a.listinfo(href='mailto:info@sun.ca', target='_blank', title='Click to view Info')
+                img(src='/images/letter_icon.png', alt='Info')
+                | info@sun.ca
+          .Tell
+            a.listtell(href='tel:(512) 895-8569', target='_blank', title='Click to view Contact')
+                img(src='/images/Tell_icon.png', alt='Tell')
+                | (512) 895-8569
+          .register
+            a.register(href='/register', title='Click to Register') Register
+          .login
+            if loggedIn
+              a.login(href='/logout', title='Click to Logout') Logout
+            else
+              a.login(href='/login', title='Click to Login') Login
+          .Search
+              form(action='#')
+                  input.sitesearch(type='text', name='sitesearch', value='Search for...')
+                  input.buttonsearch(type='submit', name='start_search', value='Search')
+      // Create logo for company
+      h1
+          a#logo(href='/')
+              img(src='/images/logo_O_204x84.png', alt='Logo')
+      // Create a navigation to introduce the company to customers
+      nav#floatingbar(role='navigation')
+          // Function as a hamburger menu icon (http://copypastecharacter.com/graphic-shapes)
+          a#menu-icon(href='#') ☰
+          ul
+              li
+                  a(href='/share-cooking') Share Cooking
+              li
+                  a(href='/products') Foods
+              li
+                  a(href='/about-us') About Us
+
+
+    block content
+    // FOOTER
+    footer
+      section
+        // Introduse some information about the company to customers
+        .container-fluid
+          // Create a row struture with five columns
+          .row
+            .col-sm-2
+              h3 COMPANY
+              br
+              p About
+              br
+              p Need Food?
+              br
+            .col-sm-2
+              h3 VOLUNTEER
+              br
+              p Volunteer
+              br
+              p Contact Us
+            .col-sm-2
+              h3 EVENTS
+              br
+              p New-All
+              br
+              p Events
+              br
+            .col-sm-2
+              h3 FOODS FOR YOU
+              br
+              p Location
+              br
+              p Map
+              br
+            .col-sm-4
+              h3 STAY CONNECT TO US
+              br
+              .row
+                .col-sm-4
+                  p
+                    label Email Address
+                .col-sm-8
+                  input#email_address(type='email', aria-labelledby='email_address', required='')
+              button.subscribe(type='submit') Subscribe
+        br
+      section
+        // Introduse some information about the company to customers
+        .container-fluid
+          // Create a row struture with five columns
+          .row
+            #copyright.col-sm-12.col-md-12.col-lg-12
+              | Copyright 2019 FOOD COMPANY - HienLam. 
+              a(href='') Privacy Policy
+              a(href='') Site Map 
+              a(href='') Contact Us.
+        br
+
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k', crossorigin='anonymous')
+    script(src='/javascripts/gallery.js', type='text/javascript')
+    script(src='/javascripts/jquery-1.9.1.min.js', type='text/javascript')

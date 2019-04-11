@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  main#main
+    section
+      #carousel-ptl.carousel.slide.carousel-fade(data-ride='carousel')
+        // Create carousel-inner
+        .carousel-inner
+          each item in home.carousel
+            figure.carousel-item
+              img.d-block.w-100(src=`${item.image}`, alt=`${item.title}`)
+        // .carousel-inner
+        // Controls
+        a.carousel-control-prev(href='#carousel-ptl', role='button', data-slide='prev')
+          // <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          span.fas.fa-arrow-circle-left.fa-lg(aria-hidden='true')
+          span.sr-only Previous
+        a.carousel-control-next(href='#carousel-ptl', role='button', data-slide='next')
+          // <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          span.fas.fa-arrow-circle-right.fa-lg(aria-hidden='true')
+          span.sr-only Next
+      // #carousel
+      // Close list Grid
+      section#content1(role='region')
+        .row
+          // Display description of the Jewelry Products
+          .col-12
+            h5.bestselling The Best Selling Foods
+            #bestselling.row
+              each product in home.bestSellers
+                .col-sm-12.col-md-3.col-lg-3.well2
+                  // Create detailed price information food and share information
+                  h2.productName= product.productName
+                  h2.linkshare
+                    | Price: #{product.price} | SHARE
+                    a(href='https://twitter.com', target='_blank', title='Click to view twitter')
+                      img.img-linknetwork(src='/images/twitter.png', alt='twitter', width='17')
+                    a(href='https://www.facebook.com', target='_blank', title='Click to view facebook')
+                      img.img-linknetwork(src='/images/facebook.png', alt='facebook', width='17')
+                    a(href='https://www.linkedin.com', target='_blank', title='Click to view linkedin')
+                      img.img-linknetwork(src='/images/linkedin.png', alt='linkedin', width='17')
+                  img(src=`${product.image}`, style='width:100%;', alt='ADS')
+                  div.description!= product.description
+                  // Create vote quality, shipping cost about food
+                  h5 RATE: #{product.rate}
+                  // Choose size for food
+                  h5 Foods Size: #{product.foodSize}
+                  // Choose buy food
+                  button.addtocart(type='submit') Add To Cart
+                // End class col-sm-3 well
+              a#see-all(href='products', title='') See All »
+      section#content2(role='region')
+
+        h5.bestselling The Latest News
+        .row
+          // <div class="col-12"><h5 class="lastnews">The Lastest News</h5>
+          #lastnews.row
+            .col-sm-12.col-md-6.col-lg-6.welllastnews
+              h3 Roast Goose with Currant Kumquat Compote
+              a(href='products', target='_blank', title='Click to view all foods')
+                img(src='/images/Banner_Art_1920_814_1.png', style='width:100%;', alt='ADS')
+              p
+                | Goose has a tendency to dry out in the oven. By the time the fat is rendered and the skin is crispy, the meat underneath becomes tough and flavourless.
+                | Read more at http://www.foodnetwork.ca/recipe/roast-goose-with-currant-kumquat-compote/3535/#KrDg34WPUQZDdoML.99...
+            .col-sm-12.col-md-6.col-lg-6.welllastnews
+              h3 Caprese Salad with Pesto Sauce
+              a(href='products', target='_blank', title='Click to view all foods')
+                img(src='/images/Banner_Art_1920_814_2.png', style='width:100%;', alt='ADS')
+              p
+                | Nothing like a fresh tomato salad in summers! A great antipasto bite to start your meal with. This combination of juicy tomatoes and mozzarella cheese salad topped with freshly made pesto sauce is a distinct yet simple one...

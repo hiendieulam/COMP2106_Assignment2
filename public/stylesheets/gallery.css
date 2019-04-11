@@ -1,0 +1,33 @@
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 480px;
+}
+
+
+.thumb-bar img {
+  display: block;
+  width:5%;
+  float: left;
+  cursor: pointer;
+  padding: 10px 5px 10px 5px;
+}
+
+/* Hide all slides to start with */
+.mySlides, .mySlides2 {
+  display: none;
+}
+.mySlides img {
+  width: 100%;
+}
+
+.mySlides2 img {
+  width: 100%;
+}
